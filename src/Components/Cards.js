@@ -80,7 +80,7 @@ const people = [
 
 function Cards() {
   useEffect(() =>{
-      AOS. init({duration: 2000});
+      AOS.init({duration: 2000});
   },[])
   return (
     <>
@@ -90,7 +90,7 @@ function Cards() {
     <div class="my-4 flex flex-col gap-4 items-center justify-center bg-white" data-aos="fade-up">
 
 {/* <!-- Card 1 --> */}
-<a href="#" class="w-[30rem] border-2 border-b-4 border-gray-200 rounded-xl hover:bg-gray-50">
+<a href="https://www.google.com/" class="w-[30rem] border-2 border-b-4 border-gray-200 rounded-xl hover:bg-gray-50">
 
   {/* <!-- Badge --> */}
   <p class="bg-sky-500 w-fit px-4 py-1 text-sm font-bold text-white rounded-tl-lg rounded-br-xl"> FEATURED </p>
@@ -99,7 +99,7 @@ function Cards() {
 
     {/* <!-- Profile Picture --> */}
     <div>
-      <img src={person.image} class="max-w-16 max-h-16 rounded-full" />
+      <img src={person.image} class="max-w-16 max-h-16 rounded-full" alt="" />
     </div>
 
     {/* <!-- Description --> */}
