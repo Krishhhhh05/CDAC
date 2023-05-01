@@ -10,6 +10,9 @@ const Home = () => {
       <Link to="/plot">
       <button type="button" class="btn btn-primary mx-6 my-2">Plot Graph</button>    
       </Link>
+      <Link to="/multi">
+      <button type="button" class="btn btn-primary mx-6 my-2">Multi</button>    
+      </Link>
       </div>
   )
 }

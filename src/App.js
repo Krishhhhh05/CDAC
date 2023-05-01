@@ -10,6 +10,7 @@ import Example from './Components/Example';
 import PlotGraph from './Components/PlotGraph';
 import Region from './Components/Region';
 import Home from './Components/Home';
+import Multi from './Components/Multi';
 
 
 function App() {
@@ -22,6 +23,8 @@ return(
     <Route path='/example' element={<Example />}/>
     <Route path='/plot' element={<PlotGraph />}/>
     <Route path='' element={<Home />}/>
+    <Route path='/multi' element={<Multi />}/>
+    
 
   </Routes>
 )
