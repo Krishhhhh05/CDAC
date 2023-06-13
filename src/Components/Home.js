@@ -9,7 +9,7 @@ const Home = () => {
 
 
 
-    <Nav variant="tabs" defaultActiveKey="/home">
+    {/* <Nav variant="tabs" defaultActiveKey="/home">
       <Nav.Item>
         <Nav.Link href="/home">Active</Nav.Link>
       </Nav.Item>
@@ -21,9 +21,9 @@ const Home = () => {
           Disabled
         </Nav.Link>
       </Nav.Item>
-    </Nav>
+    </Nav> */}
   
-export default TabsExample;
+{/* export default TabsExample; */}
 
       <Link to="/region">
       <button type="button" class="btn btn-primary mx-6 my-2">Region</button>    
