@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react';
 import Plot from 'react-plotly.js';
 
@@ -149,28 +147,3 @@ function Multi() {
 
 export default Multi;
 
-// const lines = [
-//     { m: 2, c: 5, color: "red" },
-//     { m: -1, c: 3, color: "blue" },
-//     { m: 0.5, c: 1, color: "green" },
-//   ];
-  
-//   function computeY(x, line) {
-//     return line.m * x + line.c;
-//   }
-  
-//   function Graph() {
-//     const x = useMemo(() => Array.from({ length: 100 }, (_, i) => i - 50), []);
-//     const fillY = lines.map((line) => x.map((x) => Math.min(computeY(x, line), 100)));
-  
-//     return (
-//            stroke={line.color}
-//                 fill={line.color}
-//               />
-//             ))}
-//           </AreaChart>
-//         </ResponsiveContainer>
-//       </div>
-//     );
-//   }
-  
