@@ -28,8 +28,9 @@ import './App.css';
 import React from 'react';
 import 'aos/dist/aos.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import   Multi  from './Components/Multi';
+import Points from './Components/Points';
 
-// import Cards from './Components/Cards';
 import { Route,Routes } from 'react-router-dom';
 // import AreaGraph from './Components/AreaGraph';
 // import Example from './Components/Example';
@@ -56,7 +57,9 @@ return(
     <Route path='/theory3' element={<TheoryLec3 />}/>
     <Route path='/theory4' element={<TheoryLec4 />}/>
     <Route path='' element={<Home />}/>
-
+    <Route path='multi' element={<Multi />}/>
+   <Route path='points' element={<Points />}/>
+      
   </Routes>
 )
 }
