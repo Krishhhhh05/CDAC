@@ -139,4 +139,8 @@ const Region = () => {
 
 export default Region;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> bd5dc94ee9054120617c02c11499f35ffbd46eaf
 

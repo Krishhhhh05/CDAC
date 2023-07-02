@@ -147,3 +147,7 @@ function Multi() {
 }
 
 export default Multi;
+<<<<<<< HEAD
+=======
+
+>>>>>>> bd5dc94ee9054120617c02c11499f35ffbd46eaf
