@@ -74,8 +74,4 @@ const LinePlot = () => {
   );
 };
 
-<<<<<<< HEAD
 export default LinePlot;
-=======
-export default LinePlot;
->>>>>>> bd5dc94ee9054120617c02c11499f35ffbd46eaf

@@ -1,5 +1,3 @@
-       
-
 import React, { useState } from 'react';
 import Plot from 'react-plotly.js';
 // import Region from './Region';
@@ -13,7 +11,7 @@ const Region = () => {
 
   const handlePlot = () => {
     const x = [-10, 10];
-    const y1 = [(-a * x[0] - c) / b, (-a * x[1] - c) / b];
+    const y1 = x.map((xVal) => (-a * xVal - c) / b);
   
     const lineTrace = {
       x: x,
@@ -73,7 +71,7 @@ const Region = () => {
   
     setPlotData(plotData);
   };
-  
+
   const layout = {
     title: 'Line Plot',
     xaxis: {
@@ -90,7 +88,7 @@ const Region = () => {
     },
     showlegend: true,
   };
-  
+
 
   return (
     <div>
@@ -119,18 +117,18 @@ const Region = () => {
             onChange={(event) => setC(parseFloat(event.target.value))}
           />
         </label>
-      
-      <button  class="btn btn-primary mx-6 my-2" onClick={handlePlot}>Plot</button>
+
+        <button class="btn btn-primary mx-6 my-2" onClick={handlePlot}>Plot</button>
       </div>
       <Plot class="float-left ml-5 px-4 my-4"
-            data={plotData}
-            layout={layout}
-            style={{ width: '800px', height: '600px' }}
-          />
-      
+        data={plotData}
+        layout={layout}
+        style={{ width: '800px', height: '600px' }}
+      />
+
       {plotData && (
-        <div id="graph" class="float-left ml-5 px-4 my-4"> 
-          
+        <div id="graph" class="float-left ml-5 px-4 my-4">
+
         </div>
       )}
     </div>
@@ -139,8 +137,4 @@ const Region = () => {
 
 export default Region;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> bd5dc94ee9054120617c02c11499f35ffbd46eaf
 
