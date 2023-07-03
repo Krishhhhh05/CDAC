@@ -45,31 +45,52 @@ const LinePlot = () => {
   };
 
   return (
-    <div id="main h-screen">
-<div id="input " class="mr-5 fixed-left float-right  mt-8 h-3/4   border-2 w-1/3 px-4 py-auto border-b-4 border-gray-200 rounded-xl bg-gray-50">
+    <div id="main h-screen ">
+      <div  class="mr-5 fixed-left float-right  mt-8 h-3/4   border-2 w-1/3 px-4 py-auto border-b-4 border-gray-200 rounded-xl bg-gray-50">
+      <h1 class=" font-bold text-lg text-center"> Plotting the points</h1>
 
+      <div className='p-3'>
+        Here we enter the co-ordinates of the two lines and plot the on the graph.<br></br><br></br>
+        We can calculate the slope of the line with the formula-<br></br>
 
-      <div class="p-1 w-full my-6">
-        <label>
-          X1: <input type="number" value={x1} onChange={(event) => setX1(parseFloat(event.target.value))} />
-        </label>
-        <label>
-          Y1: <input type="number" value={y1} onChange={(event) => setY1(parseFloat(event.target.value))} />
-        </label>
+        <img src="../assets/slope formula.png"  alt="Understanding of Planes and Axis"></img>
       </div>
-      <div class="p-1 w-full my-6" >
-        <label>
-          X2: <input type="number" value={x2} onChange={(event) => setX2(parseFloat(event.target.value))}/>
-        </label>
-        <label>
-          Y2: <input type="number" value={y2} onChange={(event) => setY2(parseFloat(event.target.value))} />
-        </label>
-      </div>
-      <button  class="btn btn-primary mx-6 my-2" onClick={handlePlot}>Plot</button>
 
-      </div>
+        
+</div>
+
+      
+    
       <div id="graph" class="float-left ml-5 px-4 my-4">
       {handlePlot()}</div>
+      <div  class="mr-5 fixed-left float-right  mt-8 h-3/4   border-2 w-1/3 px-4 py-auto border-b-4 border-gray-200 rounded-xl bg-gray-50">
+
+
+<div class="p-1 w-full my-6">
+<h2 class=" font-semibold text-lg text-center"> Enter the coordinates of Line 1</h2>
+
+  <label>
+
+    X1: <input type="number" className='bg-white rounded-full mx-6 my-6 px-3' value={x1} onChange={(event) => setX1(parseFloat(event.target.value))} />
+  </label>
+  <label>
+    Y1: <input type="number" className='bg-white rounded-full mx-6 my-6 px-3' value={y1} onChange={(event) => setY1(parseFloat(event.target.value))} />
+  </label>
+
+
+  <h2 class=" font-semibold text-lg text-center"> Enter the coordinates of Line 2</h2>
+
+  <label>
+
+    X2: <input type="number" className='bg-white rounded-full mx-6 my-6 px-3' value={x2} onChange={(event) => setX2(parseFloat(event.target.value))}/>
+  </label>
+  <label>
+    Y2: <input type="number" className='bg-white rounded-full mx-6 my-6 px-3' value={y2} onChange={(event) => setY2(parseFloat(event.target.value))} />
+  </label>
+</div>
+
+</div>
+      
     </div>
   );
 };

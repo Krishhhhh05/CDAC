@@ -1,29 +1,4 @@
-// import { Route,Routes } from 'react-router-dom';
-// import './App.css';
-// // import { Home } from './components/Home'
 
-// import PlotGraph from './Components/PlotGraph'
-// import Home from './Components/Home';
-//import Region from './Components/Region';
-
-
-// function App() {
-//   return (
-//     <>
-//     <Routes>
-//       <Route path='' element={<Home/>}/>
-//       <Route path='plot' element={<PlotGraph />}/>
-//       <Route path='multi' element={<Multi />}/>
-//       <Route path='region' element={<Region />}/>
-//       <Route path='points' element={<Points />}/>
-      
-//     </Routes>
-//     </>
-
-//   );
-// }
-
-// export default App;
 import './App.css';
 import React from 'react';
 import 'aos/dist/aos.css'
@@ -42,7 +17,7 @@ import TheoryLec3 from './Components/TheoryLec3';
 import TheoryLec4 from './Components/TheoryLec4';
 import Points from './Components/Points';
 import   Multi  from './Components/Multi';
-
+import Graph from './Components/Graph';
 import Home from './Components/Home';
 
 
@@ -61,6 +36,7 @@ return(
     <Route path='/theory4' element={<TheoryLec4 />}/>
     <Route path='multi' element={<Multi />}/>
     <Route path='points' element={<Points />}/>
+    <Route path='/graph' element={<Graph />}/>
     <Route path='' element={<Home />}/>
     <Route path='multi' element={<Multi />}/>
    <Route path='points' element={<Points />}/>
