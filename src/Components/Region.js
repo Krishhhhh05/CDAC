@@ -94,10 +94,18 @@ const Region = () => {
 
   return (
     <div>
+      
+      
       <div id="input" class="mr-5 top-4 fixed-left float-right border-2 w-1/3 p-4 border-b-4 border-gray-200 rounded-xl bg-gray-50">
+      <h1 class=" font-bold text-lg text-center"> Shading the region</h1>
+
+        Here we use the equation-<br></br><br></br>
+        <img src="../assets/main.png"  alt="main_eq"></img><br></br>
+        The entire graph is divided into 2 parts and shaded positive or negative according to the equation
+        <br></br>
         <label>
           a:
-          <input
+          <input className='bg-white rounded-full mx-6 my-6 px-3'
             type="number"
             value={a}
             onChange={(event) => setA(parseFloat(event.target.value))}
@@ -105,7 +113,7 @@ const Region = () => {
         </label>
         <label>
           b:
-          <input
+          <input className='bg-white rounded-full mx-6 my-6 px-3'
             type="number"
             value={b}
             onChange={(event) => setB(parseFloat(event.target.value))}
@@ -113,15 +121,17 @@ const Region = () => {
         </label>
         <label>
           c:
-          <input
+          <input className='bg-white rounded-full mx-6 my-6 px-3'
             type="number"
             value={c}
             onChange={(event) => setC(parseFloat(event.target.value))}
           />
         </label>
-      
-      <button  class="btn btn-primary mx-6 my-2" onClick={handlePlot}>Plot</button>
+        <br></br>
+        <button  class="btn btn-primary mx-6 my-2 " onClick={handlePlot}>Plot</button>
+
       </div>
+
       <Plot class="float-left ml-5 px-4 my-4"
             data={plotData}
             layout={layout}
@@ -133,14 +143,13 @@ const Region = () => {
           
         </div>
       )}
+
+
+
     </div>
   );
 };
 
 export default Region;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> bd5dc94ee9054120617c02c11499f35ffbd46eaf
 

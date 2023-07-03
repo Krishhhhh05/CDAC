@@ -71,35 +71,23 @@ function Multi() {
   return (
     <>
     
-      <div  class="px-6">
-        <div id=" input" class=" mr-5   fixed-left float-right border-2 w-1/3   p-4 border-b-4 border-gray-200 rounded-xl bg-gray-50">
-          <h1 class=" font-bold text-lg text-center"> Plotting the Equation</h1>
-          <br />
-          <div className='' id='input'>
-          <div class="a" ID="INPUT">
-            <label htmlFor="a">Enter the slope: </label>
-            <input class="bg-white rounded-full mx-6 my-6 px-3"
-              id="a"
-              name="a"
-              type="text"
-              value={a}
-              onChange={handleInputChange}
-            />
-            <br />
-          </div>
-          <label htmlFor="b">Enter the Intercept: </label>
-          <input class="bg-white rounded-full mx-6 my-6 px-3"
-            id="b"
-            name="b"
-            type="text"
-            value={b}
-            onChange={handleInputChange}
-          />
+    
+    <div  class=" mr-5 px-6 mt-2 fixed-right  float-right border-2 w-1/3   p-4 border-b-4 border-gray-200 rounded-xl bg-gray-50">
+        
+        <h1 class=" font-bold text-lg text-center"> Understanding the game</h1>
 
-           
-          </div>
+        <div className='p-3'>
+          The lines here are in the form of <b>Y=mX+C </b><br></br><br></br>
+          Enter some X and Y coordinates.<br></br><br></br>
+          It will then plot 4 lines corresponding to your coordinates. <br></br><br></br>
+          Choose the correct lines from the option. <br></br>
+
         </div>
+          <br />
       </div>
+
+       
+      
 
       <div id="graph" class=" float-left ml-5 px-4 my-4 ">
         <Plot
@@ -142,12 +130,36 @@ function Multi() {
           }}
         />
       </div>
+
+      <div id=" input" class=" mr-5  mt-2 fixed-lef float-right border-2 w-1/3   p-4 border-b-4 border-gray-200 rounded-xl bg-gray-50">
+          <h1 class=" font-bold text-lg text-center"> Plotting the Equation</h1>
+          <br />
+          <div className='' id='input'>
+          <div class="a" ID="INPUT">
+            <label htmlFor="a">Enter the slope: </label>
+            <input class="bg-white rounded-full mx-6 my-6 px-3"
+              id="a"
+              name="a"
+              type="text"
+              value={a}
+              onChange={handleInputChange}
+            />
+            <br />
+          </div>
+          <label htmlFor="b">Enter the Intercept: </label>
+          <input class="bg-white rounded-full mx-6 my-6 px-3"
+            id="b"
+            name="b"
+            type="text"
+            value={b}
+            onChange={handleInputChange}
+          />
+
+           
+          </div>
+        </div>
     </>
   );
 }
 
 export default Multi;
-<<<<<<< HEAD
-=======
-
->>>>>>> bd5dc94ee9054120617c02c11499f35ffbd46eaf
