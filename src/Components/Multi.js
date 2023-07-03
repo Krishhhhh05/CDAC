@@ -5,21 +5,21 @@ function Multi() {
   // Define state variables for equation entered by user
   const [a, setA] = useState('');
   const [b, setB] = useState('');
-  
+
 
   // Define a function to compute y values based on a linear equation
   function computeY1(x) {
     // Parse the user-entered equation as "ax + b" format
     const parsedA = parseFloat(a);
     const parsedB = parseFloat(b);
-    
+
     // Compute y value for the given x value
     return parsedA * x + parsedB;
   }
 
   function computeY2(x) {
     // Parse the user-entered equation as "ax + b" format
-    
+
     const parsedC = parseFloat(-a);
     const parsedD = parseFloat(-b);
 
@@ -30,7 +30,7 @@ function Multi() {
 
   function computeY3(x) {
     // Parse the user-entered equation as "ax + b" format
-    
+
     const parsedE = parseFloat(a);
     const parsedF = parseFloat(-b);
 
@@ -40,7 +40,7 @@ function Multi() {
 
   function computeY4(x) {
     // Parse the user-entered equation as "ax + b" format
-    
+
     const parsedG = parseFloat(-a);
     const parsedH = parseFloat(b);
 
@@ -65,13 +65,31 @@ function Multi() {
     } else if (name === 'b') {
       setB(value);
     }
-    
   }
-  // flex items-center float-right w-1/3 h-screen
-  return (
-    <>
+
     
     
+  
+
+       
+      
+
+    
+ 
+      
+  function handleCorrectClick() {
+    alert('Your answer is correct!');
+  }
+
+  // Function to handle wrong button clicks
+  function handleWrongClick() {
+    alert('Your answer is wrong!');
+  }
+
+
+return (
+  <>
+    <div class="px-6">
     <div  class=" mr-5 px-6 mt-2 fixed-right  float-right border-2 w-1/3   p-4 border-b-4 border-gray-200 rounded-xl bg-gray-50">
         
         <h1 class=" font-bold text-lg text-center"> Understanding the game</h1>
@@ -85,56 +103,10 @@ function Multi() {
         </div>
           <br />
       </div>
-
-       
-      
-
-      <div id="graph" class=" float-left ml-5 px-4 my-4 ">
-        <Plot
-          data={[
-            {
-              x: x,
-              y: y1,
-              type: 'scatter',
-              mode: 'lines',
-              line: { color: 'red' },
-            },
-            {
-                x: x,
-                y: y2,
-                type: 'scatter',
-                mode: 'lines',
-                line: { color: 'blue' },
-              },
-              {
-                x: x,
-                y: y3,
-                type: 'scatter',
-                mode: 'lines',
-                line: { color: 'green' },
-              },
-              {
-                x: x,
-                y: y4,
-                type: 'scatter',
-                mode: 'lines',
-                line: { color: 'yellow' },
-              },
-          ]}
-          layout={{
-            width: 800,
-            height: 600,
-            title: 'Line Graph of Equation',
-            xaxis: { title: 'X Axis' },
-            yaxis: { title: 'Y Axis' },
-          }}
-        />
-      </div>
-
-      <div id=" input" class=" mr-5  mt-2 fixed-lef float-right border-2 w-1/3   p-4 border-b-4 border-gray-200 rounded-xl bg-gray-50">
-          <h1 class=" font-bold text-lg text-center"> Plotting the Equation</h1>
-          <br />
-          <div className='' id='input'>
+      <div id=" input" class=" mr-5   fixed-left float-right border-2 w-1/3   p-4 border-b-4 border-gray-200 rounded-xl bg-gray-50">
+        <h1 class=" font-bold text-lg text-center"> Plotting the Equation</h1>
+        <br />
+        <div className='' id='input'>
           <div class="a" ID="INPUT">
             <label htmlFor="a">Enter the slope: </label>
             <input class="bg-white rounded-full mx-6 my-6 px-3"
@@ -155,11 +127,66 @@ function Multi() {
             onChange={handleInputChange}
           />
 
-           
-          </div>
+
         </div>
-    </>
-  );
+      </div>
+    </div>
+
+    <div id="graph" class=" float-left ml-5 px-4 my-4 ">
+      <Plot
+        data={[
+          {
+            x: x,
+            y: y1,
+            type: 'scatter',
+            mode: 'lines',
+            line: { color: 'red' },
+          },
+          {
+            x: x,
+            y: y2,
+            type: 'scatter',
+            mode: 'lines',
+            line: { color: 'blue' },
+          },
+          {
+            x: x,
+            y: y3,
+            type: 'scatter',
+            mode: 'lines',
+            line: { color: 'green' },
+          },
+          {
+            x: x,
+            y: y4,
+            type: 'scatter',
+            mode: 'lines',
+            line: { color: 'yellow' },
+          },
+        ]}
+        layout={{
+          width: 800,
+          height: 600,
+          title: 'Line Graph of Equation',
+          xaxis: { title: 'X Axis' },
+          yaxis: { title: 'Y Axis' },
+        }}
+      />
+    </div>
+    <div>
+      <h2>Select your Answer : </h2>
+      <br></br>
+      <input type="button" value="RED" onClick={handleCorrectClick}></input>
+      <br></br>
+      <input type="button" value="BLUE" onClick={handleWrongClick}></input>
+      <br></br>
+      <input type="button" value="GREEN" onClick={handleWrongClick}></input>
+      <br></br>
+      <input type="button" value="YELLOW" onClick={handleWrongClick}></input>
+      <br></br>
+    </div>
+  </>
+);
 }
 
 export default Multi;

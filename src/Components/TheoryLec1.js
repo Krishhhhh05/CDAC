@@ -1,12 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
-// import { AiFillHome } from 'react-icons/ai';
-// import { IoLogoAndroid } from 'react-icons/io';
-// import { FaGraduationCap } from 'react-icons/fa';
-// import { IoLogoGameControllerB } from 'react-icons/io';
-// import { BsPencilFill } from 'react-icons/bs';
-// import { IoMdSettings } from 'react-icons/io';
-// import { IoMdExit } from 'react-icons/io';
+
 import './Style.css';
 import Desmos from 'desmos'
 
@@ -24,6 +17,4 @@ document.body.prepend(elt)
         
     </>
     )
-}
 
-export default TheoryLec1
