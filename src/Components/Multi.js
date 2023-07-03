@@ -66,6 +66,17 @@ function Multi() {
       setB(value);
     }
   }
+
+    
+    
+  
+
+       
+      
+
+    
+ 
+      
   function handleCorrectClick() {
     alert('Your answer is correct!');
   }
@@ -76,10 +87,22 @@ function Multi() {
   }
 
 
-// flex items-center float-right w-1/3 h-screen
 return (
   <>
     <div class="px-6">
+    <div  class=" mr-5 px-6 mt-2 fixed-right  float-right border-2 w-1/3   p-4 border-b-4 border-gray-200 rounded-xl bg-gray-50">
+        
+        <h1 class=" font-bold text-lg text-center"> Understanding the game</h1>
+
+        <div className='p-3'>
+          The lines here are in the form of <b>Y=mX+C </b><br></br><br></br>
+          Enter some X and Y coordinates.<br></br><br></br>
+          It will then plot 4 lines corresponding to your coordinates. <br></br><br></br>
+          Choose the correct lines from the option. <br></br>
+
+        </div>
+          <br />
+      </div>
       <div id=" input" class=" mr-5   fixed-left float-right border-2 w-1/3   p-4 border-b-4 border-gray-200 rounded-xl bg-gray-50">
         <h1 class=" font-bold text-lg text-center"> Plotting the Equation</h1>
         <br />
