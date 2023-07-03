@@ -73,10 +73,9 @@ function Home() {
 
             <h1> Lectures </h1>
 
-            <div className="card flex flex-row  font-semibold ">
-              <div className='align-middle'>
+            <div className="card flex flex-row text-center font-semibold mt-3">
+              <div></div>
             Understanding Planes of Axis
-            </div>
               <Link to="/theory2">
                 <button type="button" class="btn btn-primary ml-2">Go!</button>
               </Link>
