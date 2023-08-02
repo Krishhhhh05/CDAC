@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import Plot from 'react-plotly.js';
+import Sidebar from './Sidebar';
+
 
 const LinePlot = () => {
   const [x1, setX1] = useState();
@@ -54,6 +56,7 @@ const LinePlot = () => {
 
   return (
     <div id="main h-screen">
+      <Sidebar />
       <div class="mr-5 fixed-left float-right mt-8 h-3/4 border-2 w-1/3 px-4 py-auto border-b-4 border-gray-200 rounded-xl bg-gray-50">
         <h1 class="font-bold text-lg text-center">Plotting the points</h1>
 

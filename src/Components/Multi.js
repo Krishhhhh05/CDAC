@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Plot from 'react-plotly.js';
+import Sidebar from './Sidebar';
 
 function Multi() {
   const [a, setA] = useState('');
@@ -56,7 +57,10 @@ function Multi() {
 
   return (
     <>
+
+
       <div className="px-6">
+      <Sidebar />
         <div className="mr-5 fixed-left my-36 float-right border-2 w-1/3 p-4 border-b-4 border-gray-200 rounded-xl bg-gray-50">
           <h1 className="font-bold text-lg text-center">Plotting the Equation</h1>
           <br />

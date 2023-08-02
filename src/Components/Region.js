@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import Plot from 'react-plotly.js';
+import Sidebar from './Sidebar';
+
 
 
 const Region = () => {
@@ -110,9 +112,9 @@ const Region = () => {
 
   return (
     <div>
-
-
       <div id="input" class="mr-5 top-4 fixed-left float-right border-2 w-1/3 p-4 border-b-4 border-gray-200 rounded-xl bg-gray-50">
+        <Sidebar />
+
         <h1 class=" font-bold text-lg text-center"> Shading the region</h1>
 
         Here we use the equation-<br></br><br></br>

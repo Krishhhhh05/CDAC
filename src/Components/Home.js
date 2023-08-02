@@ -14,7 +14,7 @@ import { FaChartArea } from 'react-icons/fa';
 import { VscOctoface } from 'react-icons/vsc';
 
 import './Style.css';
-// import Sidebar from './Sidebar';
+import Sidebar from './Sidebar';
 
 function Home() {
   return (
