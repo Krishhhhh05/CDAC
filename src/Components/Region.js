@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Plot from 'react-plotly.js';
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
 import { AiFillHome } from 'react-icons/ai';
 import { IoLogoAndroid } from 'react-icons/io';
 import { FaGraduationCap } from 'react-icons/fa';
@@ -8,8 +9,7 @@ import { IoLogoGameControllerB } from 'react-icons/io';
 import { BsPencilFill } from 'react-icons/bs';
 import { IoMdSettings } from 'react-icons/io';
 import { IoMdExit } from 'react-icons/io';
-
-
+import { useNavigate } from 'react-router';
 
 const Region = () => {
   const [a, setA] = useState();
@@ -98,25 +98,39 @@ const Region = () => {
     showlegend: false,
   };
 
-  function checkred(x, y) {
+  const navigate = useNavigate();
+
+  async function checkred(x, y) {
     if (a > 0 && b > 0 && c > 0) {
-      alert("yes");
-    }
-    else {
-      alert("no");
+      Swal.fire('Correct!', 'Your answer is correct!', 'success');
+    } else {
+      const result = await Swal.fire({
+        icon: 'error',
+        title: 'Incorrect!',
+        text: 'Your answer is incorrect. Please try again.',
+        confirmButtonText: 'OK',
+      });
+      if (result.isConfirmed) {
+        navigate('/theory4');
+      }
     }
   }
-
-  function checkgreen(x, y) {
+  async function checkgreen(x, y) {
     if (a < 0 || b < 0 || c < 0) {
-      alert("yes");
-    }
-    else {
-      alert("no");
+      Swal.fire('Correct!', 'Your answer is correct!', 'success');
+    } else {
+      const result = await Swal.fire({
+        icon: 'error',
+        title: 'Incorrect!',
+        text: 'Your answer is incorrect. Please try again.',
+        confirmButtonText: 'OK',
+      });
+      if (result.isConfirmed) {
+        navigate('/theory4');
+      }
     }
   }
-
-
+  
   return (
     <>
 

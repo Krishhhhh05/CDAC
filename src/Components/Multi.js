@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Plot from 'react-plotly.js';
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
 import { AiFillHome } from 'react-icons/ai';
 import { IoLogoAndroid } from 'react-icons/io';
 import { FaGraduationCap } from 'react-icons/fa';
@@ -8,8 +9,9 @@ import { IoLogoGameControllerB } from 'react-icons/io';
 import { BsPencilFill } from 'react-icons/bs';
 import { IoMdSettings } from 'react-icons/io';
 import { IoMdExit } from 'react-icons/io';
+import { useNavigate } from 'react-router';
 
-function Multi() {
+function Multi(props) {
   const [a, setA] = useState('');
   const [b, setB] = useState('');
   const colors = ['blue', 'red', 'yellow', 'green'];
@@ -54,11 +56,21 @@ function Multi() {
     }
   }
 
-  function checkAnswer(color) {
+  const navigate = useNavigate();
+
+  async function checkAnswer(color) {
     if (color === correctAnswer) {
-      alert('Correct!');
+      Swal.fire('Correct!', 'Your answer is correct!', 'success');
     } else {
-      alert('Incorrect!');
+      const result = await Swal.fire({
+        icon: 'error',
+        title: 'Incorrect!',
+        text: 'Your answer is incorrect. Please try again.',
+        confirmButtonText: 'OK',
+      });
+      if (result.isConfirmed) {
+        navigate('/theory3');
+      }
     }
   }
 
