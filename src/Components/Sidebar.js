@@ -15,13 +15,11 @@ function Sidebar() {
 
             < div class="flex m-2 justify-start items-center h-screen">
                 <div id="sidebar" class="bg-black rounded-lg h-90 w-20 flex flex-col items-center">
-
                     <div class="text-white p-8">
                         <div>
                             <IoLogoAndroid className="h-12 w-12 text-gray-500" />
                         </div>
                     </div>
-
                     <div class="flex flex-col flex-grow justify-center">
                         <div class="text-white p-3">
                             <div>
@@ -32,7 +30,7 @@ function Sidebar() {
                         </div>
                         <div class="text-white p-3">
                             <div>
-                                <Link to="/theorylec1">
+                                <Link to="/theory1">
                                     <FaGraduationCap className="h-6 w-6 text-gray-500" />
                                 </Link>
 
@@ -62,7 +60,6 @@ function Sidebar() {
                             </div>
                         </div>
                     </div>
-
                     <div class="text-white p-16">
                         <div>
                             <Link to="/">
@@ -70,12 +67,7 @@ function Sidebar() {
                             </Link>
                         </div>
                     </div>
-
                 </div>
-
-
-
-
             </div>
 
         </>
