@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Plot from 'react-plotly.js';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
@@ -99,42 +99,66 @@ const Region = () => {
   };
 
   const navigate = useNavigate();
+  const [points, setPoints] = useState(0);
+
+  useEffect(() => {
+    const savedPoints = localStorage.getItem('points');
+    if (savedPoints !== null) {
+      setPoints(parseInt(savedPoints, 10));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('points', points.toString());
+  }, [points]);
 
   async function checkred(x, y) {
     if (a > 0 && b > 0 && c > 0) {
-      Swal.fire('Correct!', 'Your answer is correct!', 'success');
+      const pointsEarned = 1;
+      setPoints(points => points + pointsEarned);
+      Swal.fire('Correct!', `Your answer is correct! Points earned: +${pointsEarned}`, 'success');
     } else {
+      const pointsDeducted = 1;
       const result = await Swal.fire({
         icon: 'error',
         title: 'Incorrect!',
-        text: 'Your answer is incorrect. What would you like to do?',
+        text: `Your answer is incorrect. Points deducted: -${pointsDeducted}. What would you like to do?`,
         showCancelButton: true,
         confirmButtonText: 'Retry',
         cancelButtonText: 'Go to Lecture',
       });
+
       if (result.isConfirmed) {
       } else if (result.dismiss === Swal.DismissReason.cancel) {
-        navigate('/theory4');
+        navigate('/theory3');
       }
+
+      setPoints(points => Math.max(points - pointsDeducted, 0));
     }
   }
-  
+
   async function checkgreen(x, y) {
     if (a < 0 || b < 0 || c < 0) {
-      Swal.fire('Correct!', 'Your answer is correct!', 'success');
+      const pointsEarned = 1;
+      setPoints(points => points + pointsEarned);
+      Swal.fire('Correct!', `Your answer is correct! Points earned: +${pointsEarned}`, 'success');
     } else {
+      const pointsDeducted = 1;
       const result = await Swal.fire({
         icon: 'error',
         title: 'Incorrect!',
-        text: 'Your answer is incorrect. What would you like to do?',
+        text: `Your answer is incorrect. Points deducted: -${pointsDeducted}. What would you like to do?`,
         showCancelButton: true,
         confirmButtonText: 'Retry',
         cancelButtonText: 'Go to Lecture',
       });
+
       if (result.isConfirmed) {
       } else if (result.dismiss === Swal.DismissReason.cancel) {
-        navigate('/theory4');
+        navigate('/theory3');
       }
+
+      setPoints(points => Math.max(points - pointsDeducted, 0));
     }
   }
 
@@ -239,8 +263,9 @@ const Region = () => {
             <button type="button" class="btn btn-danger mx-2" onClick={() => checkred(a, b)}>Red</button>
             <button type="button" class="btn btn-success mr-2 ml-5" onClick={() => checkgreen(a, b)}>Green</button>
           </div>
-
-
+          <div className="text-center bg-white p-4 border-t-2 border-gray-300">
+            <p>Total Points: {points}</p>
+          </div>
         </div>
 
         <Plot class="float-left ml-5 px-4 my-4"

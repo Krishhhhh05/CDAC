@@ -57,27 +57,44 @@ function Multi(props) {
   }
 
   const navigate = useNavigate();
+  const [points, setPoints] = useState(0);
+
+  useEffect(() => {
+    const savedPoints = localStorage.getItem('points');
+    if (savedPoints !== null) {
+      setPoints(parseInt(savedPoints, 10));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('points', points.toString());
+  }, [points]);
 
   async function checkAnswer(color) {
     if (color === correctAnswer) {
-      Swal.fire('Correct!', 'Your answer is correct!', 'success');
+      const pointsEarned = 1;
+      setPoints(points => points + pointsEarned);
+      Swal.fire('Correct!', `Your answer is correct! Points earned: +${pointsEarned}`, 'success');
     } else {
+      const pointsDeducted = 1;
       const result = await Swal.fire({
         icon: 'error',
         title: 'Incorrect!',
-        text: 'Your answer is incorrect. What would you like to do?',
+        text: `Your answer is incorrect. Points deducted: -${pointsDeducted}. What would you like to do?`,
         showCancelButton: true,
         confirmButtonText: 'Retry',
         cancelButtonText: 'Go to Lecture',
       });
+
       if (result.isConfirmed) {
       } else if (result.dismiss === Swal.DismissReason.cancel) {
         navigate('/theory3');
       }
+
+      setPoints(points => Math.max(points - pointsDeducted, 0));
     }
   }
-
-
+  
   return (
     <>
 
@@ -180,6 +197,9 @@ function Multi(props) {
                   {color.charAt(0).toUpperCase() + color.slice(1)}
                 </button>
               ))}
+            </div>
+            <div className="text-center bg-white p-4 border-t-2 border-gray-300">
+              <p>Total Points: {points}</p>
             </div>
           </div>
         </div>
