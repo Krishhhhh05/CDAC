@@ -107,14 +107,18 @@ const Region = () => {
       const result = await Swal.fire({
         icon: 'error',
         title: 'Incorrect!',
-        text: 'Your answer is incorrect. Please try again.',
-        confirmButtonText: 'OK',
+        text: 'Your answer is incorrect. What would you like to do?',
+        showCancelButton: true,
+        confirmButtonText: 'Retry',
+        cancelButtonText: 'Go to Lecture',
       });
       if (result.isConfirmed) {
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
         navigate('/theory4');
       }
     }
   }
+  
   async function checkgreen(x, y) {
     if (a < 0 || b < 0 || c < 0) {
       Swal.fire('Correct!', 'Your answer is correct!', 'success');
@@ -122,15 +126,19 @@ const Region = () => {
       const result = await Swal.fire({
         icon: 'error',
         title: 'Incorrect!',
-        text: 'Your answer is incorrect. Please try again.',
-        confirmButtonText: 'OK',
+        text: 'Your answer is incorrect. What would you like to do?',
+        showCancelButton: true,
+        confirmButtonText: 'Retry',
+        cancelButtonText: 'Go to Lecture',
       });
       if (result.isConfirmed) {
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
         navigate('/theory4');
       }
     }
   }
-  
+
+
   return (
     <>
 

@@ -65,14 +65,18 @@ function Multi(props) {
       const result = await Swal.fire({
         icon: 'error',
         title: 'Incorrect!',
-        text: 'Your answer is incorrect. Please try again.',
-        confirmButtonText: 'OK',
+        text: 'Your answer is incorrect. What would you like to do?',
+        showCancelButton: true,
+        confirmButtonText: 'Retry',
+        cancelButtonText: 'Go to Lecture',
       });
       if (result.isConfirmed) {
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
         navigate('/theory3');
       }
     }
   }
+
 
   return (
     <>
