@@ -7,12 +7,15 @@ import { FaChartArea } from 'react-icons/fa';
 
 import './Style.css';
 import Sidebar from './Sidebar';
-import Anime from './Anime';
+// import Anime from './Anime';
 
 function Home() {
   return (
     <>
-
+      {/* <div>
+        <h1>My React App</h1>
+        <Anime />
+      </div> */}
       <div className='App'>
         < div class="flex justify-start items-center h-screen">
           <Sidebar />

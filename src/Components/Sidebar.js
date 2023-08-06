@@ -46,7 +46,7 @@ function Sidebar() {
                         </div>
                         <div class="text-white p-3">
                             <div>
-                                <Link to="/">
+                                <Link to="/quiz">
                                     <BsPencilFill className="h-6 w-6 text-gray-500" />
                                 </Link>
 
