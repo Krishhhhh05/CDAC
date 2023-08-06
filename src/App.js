@@ -17,6 +17,7 @@ import Points from './Components/Points';
 import Multi  from './Components/Multi';
 import Home from './Components/Home';
 import Sidebar from './Components/Sidebar';
+import Anime from './Components/Anime';
 
 
 function App() {
@@ -38,7 +39,7 @@ return(
     <Route path='multi' element={<Multi />}/>
     <Route path='points' element={<Points />}/>
     <Route path='sidebar' element={<Sidebar />}/>
-
+    <Route path='anime' element={<Anime />}/>
       
   </Routes>
 )

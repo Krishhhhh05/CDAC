@@ -1,9 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { AiFillHome } from 'react-icons/ai';
+import { IoLogoAndroid } from 'react-icons/io';
+import { FaGraduationCap } from 'react-icons/fa';
+import { IoLogoGameControllerB } from 'react-icons/io';
+import { BsPencilFill } from 'react-icons/bs';
+import { IoMdSettings } from 'react-icons/io';
+import { IoMdExit } from 'react-icons/io';
 import { MdAutoGraph } from 'react-icons/md';
 import { LuAxis3D } from 'react-icons/lu';
 import { AiOutlineArrowsAlt } from 'react-icons/ai';
 import { FaChartArea } from 'react-icons/fa';
+import { VscOctoface } from 'react-icons/vsc';
 
 import './Style.css';
 import Sidebar from './Sidebar';
