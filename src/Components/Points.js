@@ -74,14 +74,14 @@ const LinePlot = () => {
           <div class="flex flex-col flex-grow justify-center">
             <div class="text-white p-3">
               <div>
-                <Link to="/">
+                <Link to="/" title="Home">
                   <AiFillHome className="h-6 w-6 text-gray-500" />
                 </Link>
               </div>
             </div>
             <div class="text-white p-3">
               <div>
-                <Link to="/theory1">
+                <Link to="/theory1" title="Lecture">
                   <FaGraduationCap className="h-6 w-6 text-gray-500" />
                 </Link>
 
@@ -89,7 +89,7 @@ const LinePlot = () => {
             </div>
             <div class="text-white p-3">
               <div>
-                <Link to="/multi">
+                <Link to="/multi" title="Games">
                   <IoLogoGameControllerB className="h-6 w-6 text-gray-500" />
                 </Link>
 
@@ -97,7 +97,7 @@ const LinePlot = () => {
             </div>
             <div class="text-white p-3">
               <div>
-                <Link to="/quiz">
+                <Link to="/quiz" title="Test">
                   <BsPencilFill className="h-6 w-6 text-gray-500" />
                 </Link>
 
@@ -105,7 +105,7 @@ const LinePlot = () => {
             </div>
             <div class="text-white p-3">
               <div>
-                <Link to="/">
+                <Link to="/" title="Settings">
                   <IoMdSettings className="h-6 w-6 text-gray-500" />
                 </Link>
               </div>
@@ -113,14 +113,12 @@ const LinePlot = () => {
           </div>
           <div class="text-white p-16">
             <div>
-              <Link to="/">
+              <Link to="/" title="Exit">
                 <IoMdExit className="h-8 w-8 text-gray-500" />
               </Link>
             </div>
           </div>
         </div>
-
-
 
         <div class="mr-5 fixed-left float-right mt-8 h-3/4 border-2 w-1/2 px-4 py-auto border-b-4 border-gray-200 rounded-xl bg-gray-50">
           <h1 class="font-bold text-lg text-center">Plotting the points</h1>
@@ -150,6 +148,7 @@ const LinePlot = () => {
               <input
                 type="number"
                 className="bg-white rounded-full mx-6 my-6 px-3"
+                placeholder='Enter X1'
                 value={x1}
                 onChange={(event) => setX1(parseFloat(event.target.value))}
               />
@@ -159,6 +158,7 @@ const LinePlot = () => {
               <input
                 type="number"
                 className="bg-white rounded-full mx-6 my-6 px-3"
+                placeholder='Enter Y1'
                 value={y1}
                 onChange={(event) => setY1(parseFloat(event.target.value))}
               />
@@ -171,6 +171,7 @@ const LinePlot = () => {
               <input
                 type="number"
                 className="bg-white rounded-full mx-6 my-6 px-3"
+                placeholder='Enter X2'
                 value={x2}
                 onChange={(event) => setX2(parseFloat(event.target.value))}
               />
@@ -180,6 +181,7 @@ const LinePlot = () => {
               <input
                 type="number"
                 className="bg-white rounded-full mx-6 my-6 px-3"
+                placeholder='Enter Y2'
                 value={y2}
                 onChange={(event) => setY2(parseFloat(event.target.value))}
               />

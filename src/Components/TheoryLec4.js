@@ -23,14 +23,14 @@ const TheoryLec4 = () => {
           <div class="flex flex-col flex-grow justify-center">
             <div class="text-white p-3">
               <div>
-                <Link to="/">
+                <Link to="/" title="Home">
                   <AiFillHome className="h-6 w-6 text-gray-500" />
                 </Link>
               </div>
             </div>
             <div class="text-white p-3">
               <div>
-                <Link to="/theory1">
+                <Link to="/theory1" title="Lecture">
                   <FaGraduationCap className="h-6 w-6 text-gray-500" />
                 </Link>
 
@@ -38,7 +38,7 @@ const TheoryLec4 = () => {
             </div>
             <div class="text-white p-3">
               <div>
-                <Link to="/multi">
+                <Link to="/multi" title="Games">
                   <IoLogoGameControllerB className="h-6 w-6 text-gray-500" />
                 </Link>
 
@@ -46,7 +46,7 @@ const TheoryLec4 = () => {
             </div>
             <div class="text-white p-3">
               <div>
-                <Link to="/quiz">
+                <Link to="/quiz" title="Test">
                   <BsPencilFill className="h-6 w-6 text-gray-500" />
                 </Link>
 
@@ -54,7 +54,7 @@ const TheoryLec4 = () => {
             </div>
             <div class="text-white p-3">
               <div>
-                <Link to="/">
+                <Link to="/" title="Settings">
                   <IoMdSettings className="h-6 w-6 text-gray-500" />
                 </Link>
               </div>
@@ -62,13 +62,12 @@ const TheoryLec4 = () => {
           </div>
           <div class="text-white p-16">
             <div>
-              <Link to="/">
+              <Link to="/" title="Exit">
                 <IoMdExit className="h-8 w-8 text-gray-500" />
               </Link>
             </div>
           </div>
         </div>
-
         <section>
           <center><h2>Shading of Region</h2></center>
           <article>

@@ -24,14 +24,14 @@ const TheoryLec1 = () => {
                     <div class="flex flex-col flex-grow justify-center">
                         <div class="text-white p-3">
                             <div>
-                                <Link to="/">
+                                <Link to="/" title="Home">
                                     <AiFillHome className="h-6 w-6 text-gray-500" />
                                 </Link>
                             </div>
                         </div>
                         <div class="text-white p-3">
                             <div>
-                                <Link to="/theory1">
+                                <Link to="/theory1" title="Lecture">
                                     <FaGraduationCap className="h-6 w-6 text-gray-500" />
                                 </Link>
 
@@ -39,7 +39,7 @@ const TheoryLec1 = () => {
                         </div>
                         <div class="text-white p-3">
                             <div>
-                                <Link to="/multi">
+                                <Link to="/multi" title="Games">
                                     <IoLogoGameControllerB className="h-6 w-6 text-gray-500" />
                                 </Link>
 
@@ -47,7 +47,7 @@ const TheoryLec1 = () => {
                         </div>
                         <div class="text-white p-3">
                             <div>
-                                <Link to="/quiz">
+                                <Link to="/quiz" title="Test">
                                     <BsPencilFill className="h-6 w-6 text-gray-500" />
                                 </Link>
 
@@ -55,7 +55,7 @@ const TheoryLec1 = () => {
                         </div>
                         <div class="text-white p-3">
                             <div>
-                                <Link to="/">
+                                <Link to="/" title="Settings">
                                     <IoMdSettings className="h-6 w-6 text-gray-500" />
                                 </Link>
                             </div>
@@ -63,7 +63,7 @@ const TheoryLec1 = () => {
                     </div>
                     <div class="text-white p-16">
                         <div>
-                            <Link to="/">
+                            <Link to="/" title="Exit">
                                 <IoMdExit className="h-8 w-8 text-gray-500" />
                             </Link>
                         </div>
@@ -81,7 +81,7 @@ const TheoryLec1 = () => {
                             In general, inequations with respect to lines can take the form y &lt; mx + b, y &gt; mx + b, y ≤ mx + b, y ≥ mx + b, or other variations. The solution to the inequation is the set of all points on the coordinate plane that satisfy the relationship expressed by the inequality and can be represented graphically as a shaded region on the coordinate plane.</p>
                     </article>
                 </section>
-            </div>
+            </div >
         </>
     )
 }
