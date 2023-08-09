@@ -12,7 +12,7 @@ import { IoMdExit } from 'react-icons/io';
 const TheoryLec2 = () => {
   return (
     <>
-
+    <div className='App'>
       < div class="flex m-2 justify-start items-center h-screen">
         <div id="sidebar" class="bg-black rounded-lg h-90 w-20 flex flex-col items-center">
           <div class="text-white p-8">
@@ -80,6 +80,7 @@ const TheoryLec2 = () => {
           </article>
           <center><img src="../assets/theorylec2.png" alt="Understanding of Planes and Axis"></img></center>
         </section>
+      </div>
       </div>
     </>
   )

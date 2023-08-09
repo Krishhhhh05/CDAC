@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
 import { IoMdExit } from 'react-icons/io';
+import undrawIllustration from '../quiz.svg';
+import './Style.css';
 
 
 const questions = [
@@ -80,52 +82,55 @@ const Quiz = () => {
     const optionLabels = ['A', 'B', 'C', 'D'];
 
     return options.map((option, index) => (
-      <div key={index} className="option">
-        <label>
-          <input
-            type="radio"
-            name="answer"
-            value={option}
-            checked={selectedAnswer === option}
-            onChange={() => handleAnswerClick(option)}
-          />
-          <span>{optionLabels[index]}. </span>
-          {option}
-        </label>
-      </div>
+      <>
+        <div key={index} className="option">
+          <label>
+            <input
+              type="radio"
+              name="answer"
+              value={option}
+              checked={selectedAnswer === option}
+              onChange={() => handleAnswerClick(option)}
+            />
+            <span>{optionLabels[index]}. </span>
+            {option}
+          </label>
+        </div>
+      </>
     ));
   };
 
   return (
     <>
-
-      <div className="quiz-container">
-        <h1><strong>Test Yourself</strong></h1>
-        {questions.length > 0 && currentQuestion < questions.length && (
-          <div className="question">
-            <h3>Question {currentQuestion + 1}</h3>
-            <br></br>
-            <h2><p><strong>{questions[currentQuestion].question}</strong></p></h2>
-            <br></br>
-            <h5><italic><p>Select the correct answer:</p></italic></h5>
-            <div className="options">{renderOptions()}</div>
-            <br></br>
-            <br></br>
-            <div class="text-black p-6">
-              <div>
-                <button className="exit-button" onClick={exitQuiz} title="Exit">
-                  <IoMdExit className="h-10 w-10 strong text-gray-500" />
-                </button>
+    <div style={{ backgroundImage: `url(${undrawIllustration})` }}>
+        <div className="quiz-container" >
+          <h1><strong>Test Yourself</strong></h1>
+          {questions.length > 0 && currentQuestion < questions.length && (
+            <div className="question">
+              <h3>Question {currentQuestion + 1}</h3>
+              <br></br>
+              <h2><p><strong>{questions[currentQuestion].question}</strong></p></h2>
+              <br></br>
+              <h5><italic><p>Select the correct answer:</p></italic></h5>
+              <div className="options">{renderOptions()}</div>
+              <br></br>
+              <br></br>
+              <div class="text-black p-6">
+                <div>
+                  <button className="exit-button" onClick={exitQuiz} title="Exit">
+                    <IoMdExit className="h-10 w-10 strong text-gray-500" />
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-        )}
-        {questions.length === 0 || currentQuestion >= questions.length ? (
-          <div className="quiz-completed">
-            <h2>Quiz completed!</h2>
-          </div>
-        ) : null}
-      </div>
+          )}
+          {questions.length === 0 || currentQuestion >= questions.length ? (
+            <div className="quiz-completed">
+              <h2>Quiz completed!</h2>
+            </div>
+          ) : null}
+        </div>
+        </div>
     </>
   );
 };
