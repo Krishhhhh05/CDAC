@@ -65,14 +65,14 @@ function Home() {
 
 
           <div className="card-container mx-5 p-4">
-            <div className="card">
+            {/* <div className="card">
               <h2>Hello Student!</h2>
               <p>Let start learning  inequality</p>
             </div>
             <div className="card">
               <h4>Time to learn inequalities in graph</h4>
               <p>Follow along the lectures and test yourself.</p>
-            </div> */}
+            </div> */} 
 
             <h1> Lectures </h1>
 
