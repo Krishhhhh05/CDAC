@@ -1,6 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Plot from 'react-plotly.js';
-// import Region from './Region';
+import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
+import { AiFillHome } from 'react-icons/ai';
+import { IoLogoAndroid } from 'react-icons/io';
+import { FaGraduationCap } from 'react-icons/fa';
+import { IoLogoGameControllerB } from 'react-icons/io';
+import { BsPencilFill } from 'react-icons/bs';
+import { IoMdSettings } from 'react-icons/io';
+import { IoMdExit } from 'react-icons/io';
+import { useNavigate } from 'react-router';
 
 const Region = () => {
   const [a, setA] = useState();
@@ -12,16 +21,16 @@ const Region = () => {
   const handlePlot = () => {
     const x = [-10, 10];
     const y1 = x.map((xVal) => (-a * xVal - c) / b);
-  
+
     const lineTrace = {
       x: x,
       y: y1,
       mode: 'lines',
       name: 'Line',
     };
-  
+
     const plotData = [lineTrace];
-  
+
     // Check if the line divides the plane into quadrants
     if (a * x[0] + b * y1[0] + c < 0 && a * x[1] + b * y1[1] + c > 0) {
       // Positive region above the line
@@ -31,10 +40,10 @@ const Region = () => {
         fill: 'toself',
         fillcolor: 'rgba(0, 255, 0, 0.3)',
         mode: 'none',
-        name: 'Positive Region',
+        name: 'Region 1',
       };
       plotData.push(positiveRegion1);
-  
+
       // Negative region below the line
       const negativeRegion1 = {
         x: [x[0], x[1], x[1], x[0]],
@@ -42,7 +51,7 @@ const Region = () => {
         fill: 'toself',
         fillcolor: 'rgba(255, 0, 0, 0.3)',
         mode: 'none',
-        name: 'Negative Region',
+        name: 'Region 2',
       };
       plotData.push(negativeRegion1);
     } else {
@@ -53,10 +62,10 @@ const Region = () => {
         fill: 'toself',
         fillcolor: 'rgba(0, 255, 0, 0.3)',
         mode: 'none',
-        name: 'Positive Region',
+        name: 'Region 2',
       };
       plotData.push(positiveRegion2);
-  
+
       // Negative region above the line
       const negativeRegion2 = {
         x: [x[0], x[1], x[1], x[0]],
@@ -64,11 +73,11 @@ const Region = () => {
         fill: 'toself',
         fillcolor: 'rgba(255, 0, 0, 0.3)',
         mode: 'none',
-        name: 'Negative Region',
+        name: 'Region 1',
       };
       plotData.push(negativeRegion2);
     }
-  
+
     setPlotData(plotData);
   };
 
@@ -86,8 +95,72 @@ const Region = () => {
       tickmode: 'linear',
       dtick: 1,
     },
-    showlegend: true,
+    showlegend: false,
   };
+
+  const navigate = useNavigate();
+  const [points, setPoints] = useState(0);
+
+  useEffect(() => {
+    const savedPoints = localStorage.getItem('points');
+    if (savedPoints !== null) {
+      setPoints(parseInt(savedPoints, 10));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('points', points.toString());
+  }, [points]);
+
+  async function checkred(x, y) {
+    if (a > 0 && b > 0 && c > 0) {
+      const pointsEarned = 1;
+      setPoints(points => points + pointsEarned);
+      Swal.fire('Correct!', `Your answer is correct! Points earned: +${pointsEarned}`, 'success');
+    } else {
+      const pointsDeducted = 1;
+      const result = await Swal.fire({
+        icon: 'error',
+        title: 'Incorrect!',
+        text: `Your answer is incorrect. Points deducted: -${pointsDeducted}. What would you like to do?`,
+        showCancelButton: true,
+        confirmButtonText: 'Retry',
+        cancelButtonText: 'Go to Lecture',
+      });
+
+      if (result.isConfirmed) {
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+        navigate('/theory3');
+      }
+
+      setPoints(points => Math.max(points - pointsDeducted, 0));
+    }
+  }
+
+  async function checkgreen(x, y) {
+    if (a < 0 || b < 0 || c < 0) {
+      const pointsEarned = 1;
+      setPoints(points => points + pointsEarned);
+      Swal.fire('Correct!', `Your answer is correct! Points earned: +${pointsEarned}`, 'success');
+    } else {
+      const pointsDeducted = 1;
+      const result = await Swal.fire({
+        icon: 'error',
+        title: 'Incorrect!',
+        text: `Your answer is incorrect. Points deducted: -${pointsDeducted}. What would you like to do?`,
+        showCancelButton: true,
+        confirmButtonText: 'Retry',
+        cancelButtonText: 'Go to Lecture',
+      });
+
+      if (result.isConfirmed) {
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+        navigate('/theory3');
+      }
+
+      setPoints(points => Math.max(points - pointsDeducted, 0));
+    }
+  }
 
 
   return (
@@ -125,14 +198,9 @@ const Region = () => {
             onChange={(event) => setC(parseFloat(event.target.value))}
           />
         </label>
-<<<<<<< HEAD
-
-        <button class="btn btn-primary mx-6 my-2" onClick={handlePlot}>Plot</button>
-=======
         <br></br>
         <button  class="btn btn-primary mx-6 my-2 " onClick={handlePlot}>Plot</button>
 
->>>>>>> db9d8685d1a17341aa1769bcdf3f3ab77abe4147
       </div>
 
       <Plot class="float-left ml-5 px-4 my-4"
@@ -141,18 +209,17 @@ const Region = () => {
         style={{ width: '800px', height: '600px' }}
       />
 
-      {plotData && (
-        <div id="graph" class="float-left ml-5 px-4 my-4">
+        {plotData && (
+          <div id="graph" class="float-left ml-5 px-4 my-4">
 
-        </div>
-      )}
+          </div>
+        )}
 
 
+      </div >
 
-    </div>
+    </>
   );
 };
 
 export default Region;
-
-

@@ -1,4 +1,5 @@
 
+
 import React, { useState } from 'react';
 import Plot from 'react-plotly.js';
 
@@ -37,6 +38,33 @@ function PlotGraph() {
   
   return (
     <>
+      <div class="px-6">
+        <div id="input" class="mr-5 fixed-left float-right border-2 w-1/3 p-4 border-b-4 border-gray-200 rounded-xl bg-gray-50">
+          <h1 class="font-bold text-lg text-center"> Plotting the Equation</h1>
+          <br />
+          <div class="">
+            <label htmlFor="a">Enter the slope: </label>
+            <input
+              class="bg-white rounded-full mx-6 my-6 px-3"
+              id="a"
+              name="a"
+              type="text"
+              value={a}
+              onChange={handleInputChange}
+            />
+            <br />
+          </div>
+          <label htmlFor="b">Enter the Intercept: </label>
+          <input
+            class="bg-white rounded-full mx-6 my-6 px-3"
+            id="b"
+            name="b"
+            type="text"
+            value={b}
+            onChange={handleInputChange}
+          />
+        </div>
+      </div>
       <div class="px-6">
         <div id="input" class="mr-5 fixed-left float-right border-2 w-1/3 p-4 border-b-4 border-gray-200 rounded-xl bg-gray-50">
           <h1 class="font-bold text-lg text-center"> Plotting the Equation</h1>
