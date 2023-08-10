@@ -170,6 +170,7 @@ function Multi(props) {
         </div>
 
 
+<<<<<<< HEAD
         <div className="mr-5 fixed-left my-36 float-right border-2 w-1/3 p-4 border-b-4 border-gray-200 rounded-xl bg-gray-50">
           <h1 className="font-bold text-lg text-center">Plotting the Equation</h1>
           <br />
@@ -198,6 +199,82 @@ function Multi(props) {
               className="bg-white rounded-full mx-6 my-6 px-3"
               id="b"
               name="b"
+=======
+  // flex items-center float-right w-1/3 h-screen
+
+  return (
+    <>
+
+
+      <div class=" mr-5 px-6 mt-2 fixed-right  float-right border-2 w-1/3   p-4 border-b-4 border-gray-200 rounded-xl bg-gray-50">
+
+        <h1 class=" font-bold text-lg text-center"> Understanding the game</h1>
+
+        <div className='p-3'>
+          The lines here are in the form of <b>Y=mX+C </b><br></br><br></br>
+          Enter some X and Y coordinates.<br></br><br></br>
+          It will then plot 4 lines corresponding to your coordinates. <br></br><br></br>
+          Choose the correct lines from the option. <br></br>
+
+        </div>
+        <br />
+      </div>
+
+
+
+
+      <div id="graph" class=" float-left ml-5 px-4 my-4 ">
+        <Plot
+          data={[
+            {
+              x: x,
+              y: y1,
+              type: 'scatter',
+              mode: 'lines',
+              line: { color: 'red' },
+            },
+            {
+              x: x,
+              y: y2,
+              type: 'scatter',
+              mode: 'lines',
+              line: { color: 'blue' },
+            },
+            {
+              x: x,
+              y: y3,
+              type: 'scatter',
+              mode: 'lines',
+              line: { color: 'green' },
+            },
+            {
+              x: x,
+              y: y4,
+              type: 'scatter',
+              mode: 'lines',
+              line: { color: 'yellow' },
+            },
+          ]}
+          layout={{
+            width: 800,
+            height: 600,
+            title: 'Line Graph of Equation',
+            xaxis: { title: 'X Axis' },
+            yaxis: { title: 'Y Axis' },
+          }}
+        />
+      </div>
+
+      <div id=" input" class=" mr-5  mt-2 fixed-lef float-right border-2 w-1/3   p-4 border-b-4 border-gray-200 rounded-xl bg-gray-50">
+        <h1 class=" font-bold text-lg text-center"> Plotting the Equation</h1>
+        <br />
+        <div className='' id='input'>
+          <div class="a" ID="INPUT">
+            <label htmlFor="a">Enter the slope: </label>
+            <input class="bg-white rounded-full mx-6 my-6 px-3"
+              id="a"
+              name="a"
+>>>>>>> main
               type="text"
               placeholder='Enter Intercept'
               value={b}

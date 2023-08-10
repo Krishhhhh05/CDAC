@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import Plot from 'react-plotly.js';
 import { Link } from 'react-router-dom';
@@ -42,21 +43,8 @@ function PlotGraph() {
     }
   }
 
-  const handleExit = () => {
-    Swal.fire({
-        title: 'Are you sure you want to exit?',
-        showCancelButton: true,
-        cancelButtonText: 'Yes, exit',
-        confirmButtonText: 'No',            
-        reverseButtons: true,
-    }).then((result) => {
-        if (result.dismiss === Swal.DismissReason.cancel) {
-            // User clicked "Yes, exit"
-            window.close();
-        }
-    });
-}
-
+  // Compute an array of y values for the fill region
+  
   return (
     <>
 
@@ -146,28 +134,34 @@ function PlotGraph() {
           </div>
         </div>
 
-        <div id="graph" class="float-left ml-5 px-4 my-4">
-          <Plot
-            data={[
-              {
-                x: x,
-                y: y,
-                type: 'scatter',
-                mode: 'lines',
-                line: { color: 'red' },
-              },
-            ]}
-            layout={{
-              width: 800,
-              height: 600,
-              title: 'Line Graph of Equation',
-              xaxis: { title: 'X Axis' },
-            }}
-          />
-        </div>
-      </div>
-    </>
-  );
-}
-
-export default PlotGraph;
+      <div id="graph" class="float-left ml-5 px-4 my-4">
+        <Plot
+          data={[
+            {
+              x: x,
+              y: y,
+              type: 'scatter',
+              mode: 'lines',
+              line: { color: 'red' },
+            },
+            {
+              x: x,
+              type: 'scatter',
+              mode: 'lines',
+              line: { color: 'transparent' },
+            },
+          ]}
+          layout={{
+            width: 800,
+            height: 600,
+            title: 'Line Graph of Equation',
+            xaxis: { title: 'X Axis' },
+          }}
+                  />
+                </div>
+              </>
+            );
+          }
+          
+          export default PlotGraph;
+          

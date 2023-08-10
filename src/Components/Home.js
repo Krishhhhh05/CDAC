@@ -17,12 +17,57 @@ function Home() {
         <Anime />
       </div> */}
       <div className='App'>
-        < div class="flex justify-start items-center h-screen">
-          <Sidebar />
-          <div className="card-container mx-5">
-            {/* <div className="card">
-              <h4>Hello Student!</h4>
-              <p>It is good to see you again.</p>
+
+        < div class="flex m-2 justify-start items-center h-screen">
+          <div id="sidebar" class="bg-black rounded-lg h-90 w-20 flex flex-col items-center">
+
+            <div class="text-white p-8">
+              <div>
+                <IoLogoAndroid className="h-12 w-12 text-gray-500" />
+              </div>
+            </div>
+
+            <div class="flex flex-col flex-grow justify-center">
+              <div class="text-white p-3">
+                <div>
+                  <AiFillHome className="h-6 w-6 text-gray-500" />
+                </div>
+              </div>
+              <div class="text-white p-3">
+                <div>
+                  <FaGraduationCap className="h-6 w-6 text-gray-500" />
+                </div>
+              </div>
+              <div class="text-white p-3">
+                <div>
+                  <IoLogoGameControllerB className="h-6 w-6 text-gray-500" />
+                </div>
+              </div>
+              <div class="text-white p-3">
+                <div>
+                  <BsPencilFill className="h-6 w-6 text-gray-500" />
+                </div>
+              </div>
+              <div class="text-white p-3">
+                <div>
+                  <IoMdSettings className="h-6 w-6 text-gray-500" />
+                </div>
+              </div>
+            </div>
+
+            <div class="text-white p-16">
+              <div>
+                <IoMdExit className="h-8 w-8 text-gray-500" />
+              </div>
+            </div>
+
+          </div>
+
+
+          <div className="card-container mx-5 p-4">
+            <div className="card">
+              <h2>Hello Student!</h2>
+              <p>Let start learning  inequality</p>
             </div>
             <div className="card">
               <h4>Time to learn inequalities in graph</h4>
@@ -30,36 +75,44 @@ function Home() {
             </div> */}
 
             <h1> Lectures </h1>
-            <div className="card flex flex-row text-center font-semibold mt-3 py-3 items-center justify-center">
-              <h6>Explaining Inequations</h6>
-              <Link to="/theory1">
-                <button type="button" class="btn btn-primary mx-6 my-2 ">View lecture</button>
-              </Link>
-            </div>
 
-            <div className="card flex flex-row text-center font-semibold mt-3 py-3 items-center justify-center">
-              <h6>Understanding Planes of Axis</h6>
+            <div className="card flex flex-row text-center font-semibold mt-3">
+              <div></div>
+            Understanding Planes of Axis
               <Link to="/theory2">
-                <button type="button" class="btn btn-primary mx-6 ">View lecture</button>
+                <button type="button" class="btn btn-primary ml-2">Go!</button>
               </Link>
             </div>
 
-            <div className="card flex flex-row text-center font-semibold mt-3 py- items-center justify-center">
-              <h6>Plotting of Lines</h6>
+             <div className="card">
+              <Link to="/theory3">
+                <button type="button" class="btn btn-primary mx-6 my-2">Plotting of Lines</button>
+              </Link>
+            </div>
+
+             <div className="card">
               <Link to="/theory3">
                 <button type="button" class="btn btn-primary mx-6 my-2 py-2 px-10 ">View lecture</button>
               </Link>
             </div>
+            <div className="card">
+              
+              <Link to="/theory1">
+                <button type="button" class="btn btn-primary mx-6 my-2">Inequations</button>
+              </Link>
+            </div>
 
-            <div className="card flex flex-row text-center font-semibold mt-3 py-3 items-center justify-center">
-              <h6>Shading of Region</h6>
+           
+           
+
+            <div className="card">
               <Link to="/theory4">
                 <button type="button" class="btn btn-primary mx-6 my-2 ">View lecture</button>
               </Link>
             </div>
           </div>
 
-          <div className="card-container mx-5">
+          <div className="card-container mx-5 p-4">
             <h1>Games</h1>
 
             <div className="card flex flex-row text-center font-semibold mt-3 py-3 items-center justify-center">
