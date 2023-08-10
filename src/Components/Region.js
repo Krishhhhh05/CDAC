@@ -239,7 +239,7 @@ const Region = () => {
             <h1 class=" font-bold text-lg text-center"> Shading the region</h1>
 
             Here we use the equation-<br></br><br></br>
-            <img src="../assets/main.png" alt="main_eq"></img><br></br>
+            <img src="../assets/main.png" alt="main_eq" style={{ width: '50%', height: '2%', }}></img><br></br>
             The entire graph is divided into 2 parts and shaded positive or negative according to the equation.
             Identify the Region which represent the postive region i.e. Ax+By+C is greater than zero
             <br></br>
@@ -270,8 +270,9 @@ const Region = () => {
                 onChange={(event) => setC(parseFloat(event.target.value))}
               />
             </label>
+            <br></br>
             <button class="btn btn-primary mx-6 my-2 " onClick={handlePlot}>Plot</button>
-            <div className=' flex justify-align'>
+            <div className=' flex justify-align' style={{ alignItems: 'center' }}>
               <button type="button" class="btn btn-danger mx-2" onClick={() => checkred(a, b)}>Red</button>
               <button type="button" class="btn btn-success mr-2 ml-5" onClick={() => checkgreen(a, b)}>Green</button>
             </div>
@@ -283,7 +284,7 @@ const Region = () => {
           <Plot class="float-left ml-5 px-4 my-4"
             data={plotData}
             layout={layout}
-            style={{ width: '800px', height: '600px' }}
+            style={{ width: '700px', height: '500px' }}
           />
 
           {plotData && (

@@ -71,7 +71,7 @@ const LinePlot = () => {
       <Plot
         data={[lineTrace]}
         layout={layout}
-        style={{ width: '800px', height: '600px' }}
+        style={{ width: '650px', height: '450px' }}
       />
     );
   };
@@ -135,10 +135,9 @@ const LinePlot = () => {
             </div>
           </div>
 
-          <div class="mr-5 fixed-left float-right mt-8 h-3/4 border-2 w-1/2 px-4 py-auto border-b-4 border-gray-200 rounded-xl bg-gray-50">
+          <div class="mr-5 fixed-left float-right mt-8 h-3/4 border-2 w-2/2 px-4 py-auto border-b-4 border-gray-200 rounded-xl bg-gray-50">
             <h1 class="font-bold text-lg text-center">Plotting the points</h1>
 
-            <div className="p-3">
               Here we enter the coordinates of the two lines and plot them on the graph.
               <br></br>
               <br></br>
@@ -146,16 +145,14 @@ const LinePlot = () => {
               <br></br>
               <img
                 src="../assets/slope formula.png"
-                alt="Understanding of Planes and Axis"
+                alt="Understanding of Planes and Axis" style={{ width: '100%', height: '20%', }}
               ></img>
-            </div>
           </div>
 
           <div id="graph" class="float-left ml-5 px-4 my-4">
             {handlePlot()}
           </div>
           <div class="mr-5 fixed-left float-right mt-8 h-3/4 border-2 w-1/3 px-4 py-auto border-b-4 border-gray-200 rounded-xl bg-gray-50">
-            <div class="p-1 w-full my-6">
               <h2 class="font-semibold text-lg text-center">Enter the coordinates of Line 1</h2>
 
               <label>
@@ -201,7 +198,6 @@ const LinePlot = () => {
                   onChange={(event) => setY2(parseFloat(event.target.value))}
                 />
               </label>
-            </div>
           </div>
         </div>
       </div>
