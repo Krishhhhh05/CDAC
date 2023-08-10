@@ -3,7 +3,7 @@ import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
 import { IoMdExit } from 'react-icons/io';
 import undrawIllustration from '../quiz.svg';
-import './Style.css';
+// import './Style.css';
 
 
 const questions = [
@@ -37,7 +37,6 @@ const Quiz = () => {
     if (nextQuestion < questions.length) {
       setCurrentQuestion(nextQuestion);
     } else {
-      // Delay the quiz completion logic to allow selectedAnswer to update
       setTimeout(() => {
         const finalScore = score + (selectedOption === currentCorrectAnswer ? 1 : 0);
         Swal.fire({
@@ -102,7 +101,8 @@ const Quiz = () => {
 
   return (
     <>
-    <div style={{ backgroundImage: `url(${undrawIllustration})` }}>
+      <body style={{ backgroundImage: `url(${undrawIllustration})`}}>
+
         <div className="quiz-container" >
           <h1><strong>Test Yourself</strong></h1>
           {questions.length > 0 && currentQuestion < questions.length && (
@@ -130,7 +130,9 @@ const Quiz = () => {
             </div>
           ) : null}
         </div>
-        </div>
+
+
+      </body>
     </>
   );
 };

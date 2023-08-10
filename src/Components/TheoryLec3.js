@@ -85,7 +85,7 @@ const TheoryLec3 = () => {
 
               Draw the line: Use a ruler or a straightedge to draw a line that passes through both points.</p>
           </article>
-          <center><img src="../assets/theorylec3.jpg" alt="Plotting of Lines"></img></center>
+          <center><img src="../assets/theorylec3.jpg" alt="Plotting of Lines" style={{width: '40%', height:'40%',}}></img></center>
         </section>
       </div>
     </>

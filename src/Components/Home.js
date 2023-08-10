@@ -61,20 +61,14 @@ function Home() {
 
           <div className="card-container mx-5">
             <h1>Games</h1>
-            <div className="card flex flex-row text-center font-semibold mt-3 py-3 items-center justify-center">
-              <LuAxis3D className="h-8 w-8 text-gray-500 float-left mr-3" />
-              <h6>Plot The Region</h6>
-              <Link to="/region">
-                <button type="button" class="btn btn-primary mx-6 my-2 py-2 px-10 h-10 w-20">Play</button>
-              </Link>
-            </div>
+
             <div className="card flex flex-row text-center font-semibold mt-3 py-3 items-center justify-center">
               <MdAutoGraph className="h-8 w-8 text-gray-500 float-left mr-3" />
 
               <h6>Plot The Graph</h6>
 
               <Link to="/plot">
-                <button type="button" class="btn btn-primary mx-6 my-2 py-2 px-10 h-10 w-20">Play</button>
+                <button type="button" class="btn btn-primary mx-6 my-2 py-2 px-10 h-10 w-20">Try</button>
               </Link>
             </div>
 
@@ -82,25 +76,35 @@ function Home() {
               <AiOutlineArrowsAlt className="h-8 w-8 text-gray-500 float-left mr-3" />
               <h6>Points And Intercepts</h6>
               <Link to="/points">
-                <button type="button" class="btn btn-primary mx-6 my-2 py-2 px-10 h-10 w-20">Play</button>
+                <button type="button" class="btn btn-primary mx-6 my-2 py-2 px-10 h-10 w-20">Try</button>
               </Link>
             </div>
 
             <div className="card flex flex-row text-center font-semibold mt-3 py-3 items-center justify-center">
               <FaChartArea className="h-8 w-8 text-gray-500 float-left mr-3" />
-              <h6>Select the correct line</h6>
+              <h6>Lines Game</h6>
               <Link to="/multi">
                 <button type="button" class="btn btn-primary mx-6 my-2 py-2 px-10 h-10 w-20">Play</button>
               </Link>
             </div>
 
             <div className="card flex flex-row text-center font-semibold mt-3 py-3 items-center justify-center">
-              <h2>Get Tested</h2>
+              <LuAxis3D className="h-8 w-8 text-gray-500 float-left mr-3" />
+              <h6>Region Game</h6>
+              <Link to="/region">
+                <button type="button" class="btn btn-primary mx-6 my-2 py-2 px-10 h-10 w-20">Play</button>
+              </Link>
             </div>
 
             <div className="card flex flex-row text-center font-semibold mt-3 py-3 items-center justify-center">
-              <h2>Ask Doubts</h2>
+              <h2>Get Tested</h2>
+              <Link to="/quiz">
+                <button type="button" class="btn btn-primary mx-6 my-2 py-2 px-10 h-10 w-20">Begin</button>
+              </Link>
             </div>
+            {/* <div className="card flex flex-row text-center font-semibold mt-3 py-3 items-center justify-center">
+              <h2>Ask Doubts</h2>
+            </div> */}
           </div>
         </div>
       </div>

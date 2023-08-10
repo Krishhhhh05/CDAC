@@ -78,7 +78,7 @@ const TheoryLec2 = () => {
 
               The x-axis and y-axis divide the plane into four quadrants, numbered I, II, III, and IV in a counterclockwise direction starting from the positive x-axis.</p>
           </article>
-          <center><img src="../assets/theorylec2.png" alt="Understanding of Planes and Axis"></img></center>
+          <center><img src="../assets/theorylec2.png" alt="Understanding of Planes and Axis" style={{width: '40%', height:'40%',}}></img></center>
         </section>
       </div>
       </div>
