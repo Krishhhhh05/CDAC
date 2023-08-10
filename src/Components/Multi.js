@@ -95,6 +95,20 @@ function Multi(props) {
     }
   }
 
+  const handleExit = () => {
+    Swal.fire({
+      title: 'Are you sure you want to exit?',
+      showCancelButton: true,
+      confirmButtonText: 'No',
+      cancelButtonText: 'Yes, exit',
+      reverseButtons: true,
+    }).then((result) => {
+      if (result.dismiss === Swal.DismissReason.cancel) {
+        window.close();
+      }
+    });
+  };
+
   return (
     <>
 
@@ -147,12 +161,13 @@ function Multi(props) {
           </div>
           <div class="text-white p-16">
             <div>
-              <Link to="/" title="Exit">
+              <button onClick={handleExit} title="Exit">
                 <IoMdExit className="h-8 w-8 text-gray-500" />
-              </Link>
+              </button>
             </div>
           </div>
         </div>
+
 
 
         <div className="mr-5 fixed-left my-36 float-right border-2 w-1/3 p-4 border-b-4 border-gray-200 rounded-xl bg-gray-50">
@@ -254,7 +269,7 @@ function Multi(props) {
             }}
           />
         </div>
-      </div>
+      </div >
     </>
   );
 }

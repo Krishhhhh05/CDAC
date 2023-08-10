@@ -7,9 +7,23 @@ import { IoLogoGameControllerB } from 'react-icons/io';
 import { BsPencilFill } from 'react-icons/bs';
 import { IoMdSettings } from 'react-icons/io';
 import { IoMdExit } from 'react-icons/io';
+import Swal from 'sweetalert2';
 
 
 const TheoryLec4 = () => {
+  const handleExit = () => {
+    Swal.fire({
+      title: 'Are you sure you want to exit?',
+      showCancelButton: true,
+      confirmButtonText: 'No',
+      cancelButtonText: 'Yes, exit',
+      reverseButtons: true,
+    }).then((result) => {
+      if (result.dismiss === Swal.DismissReason.cancel) {
+        window.close();
+      }
+    });
+  };
   return (
     <>
 
@@ -62,9 +76,9 @@ const TheoryLec4 = () => {
           </div>
           <div class="text-white p-16">
             <div>
-              <Link to="/" title="Exit">
+              <button onClick={handleExit} title="Exit">
                 <IoMdExit className="h-8 w-8 text-gray-500" />
-              </Link>
+              </button>
             </div>
           </div>
         </div>
@@ -85,7 +99,7 @@ const TheoryLec4 = () => {
 
               For example, if the inequality is y &lt; 2x + 3, you would graph the line y = 2x + 3 with a dashed line (because the inequality is "less than"). Then, you would choose a test point, such as (0,0), and substitute the values into the inequality to get 0 &lt; 2(0) + 3. Since this is true, you would shade the half-plane that contains the origin (which is the region below the dashed line). Finally, you would label the shaded region with the inequality symbol, y &lt; 2x + 3, and any other relevant information.</p>
           </article>
-          <center><img src="../assets/theorylec4.jpg" alt="Shading of Region" style={{width: '30%', height:'30%',}}></img></center>
+          <center><img src="../assets/theorylec4.jpg" alt="Shading of Region" style={{ width: '30%', height: '30%', }}></img></center>
         </section>
       </div>
     </>

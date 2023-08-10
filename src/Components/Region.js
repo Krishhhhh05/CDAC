@@ -17,6 +17,20 @@ const Region = () => {
   const [c, setC] = useState();
   const [plotData, setPlotData] = useState(null);
 
+  const handleExit = () => {
+    Swal.fire({
+      title: 'Are you sure you want to exit?',
+      showCancelButton: true,
+      confirmButtonText: 'No',
+      cancelButtonText: 'Yes, exit',
+      reverseButtons: true,
+    }).then((result) => {
+      if (result.dismiss === Swal.DismissReason.cancel) {
+        window.close();
+      }
+    });
+  };
+
 
   const handlePlot = () => {
     const x = [-10, 10];
@@ -215,9 +229,9 @@ const Region = () => {
           </div>
           <div class="text-white p-16">
             <div>
-              <Link to="/" title="Exit">
+              <button onClick={handleExit} title="Exit">
                 <IoMdExit className="h-8 w-8 text-gray-500" />
-              </Link>
+              </button>
             </div>
           </div>
         </div>

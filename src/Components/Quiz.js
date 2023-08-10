@@ -101,7 +101,7 @@ const Quiz = () => {
 
   return (
     <>
-      <body style={{ backgroundImage: `url(${undrawIllustration})`}}>
+      <body style={{ backgroundImage: `url(${undrawIllustration})` }}>
 
         <div className="quiz-container" >
           <h1><strong>Test Yourself</strong></h1>

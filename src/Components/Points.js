@@ -8,6 +8,7 @@ import { IoLogoGameControllerB } from 'react-icons/io';
 import { BsPencilFill } from 'react-icons/bs';
 import { IoMdSettings } from 'react-icons/io';
 import { IoMdExit } from 'react-icons/io';
+import Swal from 'sweetalert2';
 
 
 const LinePlot = () => {
@@ -15,6 +16,20 @@ const LinePlot = () => {
   const [y1, setY1] = useState();
   const [x2, setX2] = useState();
   const [y2, setY2] = useState();
+
+  const handleExit = () => {
+    Swal.fire({
+      title: 'Are you sure you want to exit?',
+      showCancelButton: true,
+      confirmButtonText: 'No',
+      cancelButtonText: 'Yes, exit',
+      reverseButtons: true,
+    }).then((result) => {
+      if (result.dismiss === Swal.DismissReason.cancel) {
+        window.close();
+      }
+    });
+  };
 
   const handlePlot = () => {
     // Calculate slope and intercept
@@ -113,9 +128,9 @@ const LinePlot = () => {
           </div>
           <div class="text-white p-16">
             <div>
-              <Link to="/" title="Exit">
+              <button onClick={handleExit} title="Exit">
                 <IoMdExit className="h-8 w-8 text-gray-500" />
-              </Link>
+              </button>
             </div>
           </div>
         </div>

@@ -8,6 +8,7 @@ import { IoLogoGameControllerB } from 'react-icons/io';
 import { BsPencilFill } from 'react-icons/bs';
 import { IoMdSettings } from 'react-icons/io';
 import { IoMdExit } from 'react-icons/io';
+import Swal from 'sweetalert2';
 
 
 function PlotGraph() {
@@ -24,6 +25,20 @@ function PlotGraph() {
     // Compute y value for the given x value
     return parsedA * x + parsedB;
   }
+
+  const handleExit = () => {
+    Swal.fire({
+      title: 'Are you sure you want to exit?',
+      showCancelButton: true,
+      confirmButtonText: 'No',
+      cancelButtonText: 'Yes, exit',
+      reverseButtons: true,
+    }).then((result) => {
+      if (result.dismiss === Swal.DismissReason.cancel) {
+        window.close();
+      }
+    });
+  };
 
   // Create an array of x values using lodash range function
   const x = Array.from({ length: 100 }, (_, i) => i / 10 - 5);
@@ -95,9 +110,9 @@ function PlotGraph() {
           </div>
           <div class="text-white p-16">
             <div>
-              <Link to="/" title="Exit">
+              <button onClick={handleExit} title="Exit">
                 <IoMdExit className="h-8 w-8 text-gray-500" />
-              </Link>
+              </button>
             </div>
           </div>
         </div>
