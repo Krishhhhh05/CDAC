@@ -8,6 +8,7 @@ import { IoLogoGameControllerB } from 'react-icons/io';
 import { BsPencilFill } from 'react-icons/bs';
 import { IoMdSettings } from 'react-icons/io';
 import { IoMdExit } from 'react-icons/io';
+import Swal from 'sweetalert2';
 
 
 function PlotGraph() {
@@ -41,7 +42,20 @@ function PlotGraph() {
     }
   }
 
-  // Compute an array of y values for the fill region
+  const handleExit = () => {
+    Swal.fire({
+        title: 'Are you sure you want to exit?',
+        showCancelButton: true,
+        cancelButtonText: 'Yes, exit',
+        confirmButtonText: 'No',            
+        reverseButtons: true,
+    }).then((result) => {
+        if (result.dismiss === Swal.DismissReason.cancel) {
+            // User clicked "Yes, exit"
+            window.close();
+        }
+    });
+}
 
   return (
     <>

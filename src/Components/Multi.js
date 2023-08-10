@@ -95,6 +95,21 @@ function Multi(props) {
     }
   }
 
+  const handleExit = () => {
+    Swal.fire({
+        title: 'Are you sure you want to exit?',
+        showCancelButton: true,
+        cancelButtonText: 'Yes, exit',
+        confirmButtonText: 'No',            
+        reverseButtons: true,
+    }).then((result) => {
+        if (result.dismiss === Swal.DismissReason.cancel) {
+            // User clicked "Yes, exit"
+            window.close();
+        }
+    });
+}
+
   return (
     <>
 

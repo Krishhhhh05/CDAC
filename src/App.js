@@ -19,6 +19,7 @@ import Home from './Components/Home';
 import Sidebar from './Components/Sidebar';
 import Anime from './Components/Anime';
 import Quiz from './Components/Quiz';
+import Settings from './Components/Settings';
 
 
 function App() {
@@ -42,6 +43,7 @@ return(
     <Route path='sidebar' element={<Sidebar />}/>
     <Route path='anime' element={<Anime />}/>
     <Route path='quiz' element={<Quiz />}/>
+    <Route path='settings' element={<Settings />}/>
       
   </Routes>
 )
