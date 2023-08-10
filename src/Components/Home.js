@@ -4,7 +4,6 @@ import { MdAutoGraph } from 'react-icons/md';
 import { LuAxis3D } from 'react-icons/lu';
 import { AiOutlineArrowsAlt } from 'react-icons/ai';
 import { FaChartArea } from 'react-icons/fa';
-
 import './Style.css';
 import Sidebar from './Sidebar';
 // import Anime from './Anime';

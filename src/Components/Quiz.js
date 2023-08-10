@@ -101,8 +101,7 @@ const Quiz = () => {
 
   return (
     <>
-      <body style={{ backgroundImage: `url(${undrawIllustration})` }}>
-
+      <div className='App' style={{ backgroundImage: `url(${undrawIllustration})` }}>
         <div className="quiz-container" >
           <h1><strong>Test Yourself</strong></h1>
           {questions.length > 0 && currentQuestion < questions.length && (
@@ -130,9 +129,7 @@ const Quiz = () => {
             </div>
           ) : null}
         </div>
-
-
-      </body>
+      </div>
     </>
   );
 };

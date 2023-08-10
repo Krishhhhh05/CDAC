@@ -26,6 +26,7 @@ const TheoryLec1 = () => {
             }
         });
     };
+    
     return (
         <>
             <div className='App'>
