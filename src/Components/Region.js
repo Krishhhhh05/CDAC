@@ -164,50 +164,118 @@ const Region = () => {
 
 
   return (
-    <div>
-      
-      
-      <div id="input" class="mr-5 top-4 fixed-left float-right border-2 w-1/3 p-4 border-b-4 border-gray-200 rounded-xl bg-gray-50">
-      <h1 class=" font-bold text-lg text-center"> Shading the region</h1>
+    <>
 
-        Here we use the equation-<br></br><br></br>
-        <img src="../assets/main.png"  alt="main_eq"></img><br></br>
-        The entire graph is divided into 2 parts and shaded positive or negative according to the equation
-        <br></br>
-        <label>
-          a:
-          <input className='bg-white rounded-full mx-6 my-6 px-3'
-            type="number"
-            value={a}
-            onChange={(event) => setA(parseFloat(event.target.value))}
-          />
-        </label>
-        <label>
-          b:
-          <input className='bg-white rounded-full mx-6 my-6 px-3'
-            type="number"
-            value={b}
-            onChange={(event) => setB(parseFloat(event.target.value))}
-          />
-        </label>
-        <label>
-          c:
-          <input className='bg-white rounded-full mx-6 my-6 px-3'
-            type="number"
-            value={c}
-            onChange={(event) => setC(parseFloat(event.target.value))}
-          />
-        </label>
-        <br></br>
-        <button  class="btn btn-primary mx-6 my-2 " onClick={handlePlot}>Plot</button>
+      < div class="flex m-2 justify-start items-center h-screen">
+        <div id="sidebar" class="bg-black rounded-lg h-90 w-20 flex flex-col items-center">
+          <div class="text-white p-8">
+            <div>
+              <IoLogoAndroid className="h-12 w-12 text-gray-500" />
+            </div>
+          </div>
+          <div class="flex flex-col flex-grow justify-center">
+            <div class="text-white p-3">
+              <div>
+                <Link to="/" title="Home">
+                  <AiFillHome className="h-6 w-6 text-gray-500" />
+                </Link>
+              </div>
+            </div>
+            <div class="text-white p-3">
+              <div>
+                <Link to="/theory1" title="Lecture">
+                  <FaGraduationCap className="h-6 w-6 text-gray-500" />
+                </Link>
 
-      </div>
+              </div>
+            </div>
+            <div class="text-white p-3">
+              <div>
+                <Link to="/multi" title="Games">
+                  <IoLogoGameControllerB className="h-6 w-6 text-gray-500" />
+                </Link>
 
-      <Plot class="float-left ml-5 px-4 my-4"
-        data={plotData}
-        layout={layout}
-        style={{ width: '800px', height: '600px' }}
-      />
+              </div>
+            </div>
+            <div class="text-white p-3">
+              <div>
+                <Link to="/quiz" title="Test">
+                  <BsPencilFill className="h-6 w-6 text-gray-500" />
+                </Link>
+
+              </div>
+            </div>
+            <div class="text-white p-3">
+              <div>
+                <Link to="/" title="Settings">
+                  <IoMdSettings className="h-6 w-6 text-gray-500" />
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div class="text-white p-16">
+            <div>
+              <Link to="/" title="Exit">
+                <IoMdExit className="h-8 w-8 text-gray-500" />
+              </Link>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div id="input" class="mr-5 top-4 fixed-left float-right border-2 w-1/3 p-4 border-b-4 border-gray-200 rounded-xl bg-gray-50">
+
+
+          <h1 class=" font-bold text-lg text-center"> Shading the region</h1>
+
+          Here we use the equation-<br></br><br></br>
+          <img src="../assets/main.png" alt="main_eq"></img><br></br>
+          The entire graph is divided into 2 parts and shaded positive or negative according to the equation.
+          Identify the Region which represent the postive region i.e. Ax+By+C is greater than zero
+          <br></br>
+          <label>
+            a:
+            <input className='bg-white rounded-full mx-6 my-6 px-3'
+              type="number"
+              value={a}
+              placeholder='Enter A'
+              onChange={(event) => setA(parseFloat(event.target.value))}
+            />
+          </label>
+          <label>
+            b:
+            <input className='bg-white rounded-full mx-6 my-6 px-3'
+              type="number"
+              value={b}
+              placeholder='Enter B'
+              onChange={(event) => setB(parseFloat(event.target.value))}
+            />
+          </label>
+          <label>
+            c:
+            <input className='bg-white rounded-full mx-6 my-6 px-3'
+              type="number"
+              value={c}
+              placeholder='Enter C'
+              onChange={(event) => setC(parseFloat(event.target.value))}
+            />
+          </label>
+          <button class="btn btn-primary mx-6 my-2 " onClick={handlePlot}>Plot</button>
+          <div className=' flex justify-align'>
+            <button type="button" class="btn btn-danger mx-2" onClick={() => checkred(a, b)}>Red</button>
+            <button type="button" class="btn btn-success mr-2 ml-5" onClick={() => checkgreen(a, b)}>Green</button>
+          </div>
+          <div className="text-center bg-white p-4 border-t-2 border-gray-300">
+            <p>Total Points: {points}</p>
+          </div>
+        </div>
+
+        <Plot class="float-left ml-5 px-4 my-4"
+          data={plotData}
+          layout={layout}
+          style={{ width: '800px', height: '600px' }}
+        />
 
         {plotData && (
           <div id="graph" class="float-left ml-5 px-4 my-4">

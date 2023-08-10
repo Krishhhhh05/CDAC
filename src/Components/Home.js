@@ -17,57 +17,12 @@ function Home() {
         <Anime />
       </div> */}
       <div className='App'>
-
-        < div class="flex m-2 justify-start items-center h-screen">
-          <div id="sidebar" class="bg-black rounded-lg h-90 w-20 flex flex-col items-center">
-
-            <div class="text-white p-8">
-              <div>
-                <IoLogoAndroid className="h-12 w-12 text-gray-500" />
-              </div>
-            </div>
-
-            <div class="flex flex-col flex-grow justify-center">
-              <div class="text-white p-3">
-                <div>
-                  <AiFillHome className="h-6 w-6 text-gray-500" />
-                </div>
-              </div>
-              <div class="text-white p-3">
-                <div>
-                  <FaGraduationCap className="h-6 w-6 text-gray-500" />
-                </div>
-              </div>
-              <div class="text-white p-3">
-                <div>
-                  <IoLogoGameControllerB className="h-6 w-6 text-gray-500" />
-                </div>
-              </div>
-              <div class="text-white p-3">
-                <div>
-                  <BsPencilFill className="h-6 w-6 text-gray-500" />
-                </div>
-              </div>
-              <div class="text-white p-3">
-                <div>
-                  <IoMdSettings className="h-6 w-6 text-gray-500" />
-                </div>
-              </div>
-            </div>
-
-            <div class="text-white p-16">
-              <div>
-                <IoMdExit className="h-8 w-8 text-gray-500" />
-              </div>
-            </div>
-
-          </div>
-
-
-          <div className="card-container mx-5 p-4">
+        < div class="flex justify-start items-center h-screen">
+          <Sidebar />
+          <div className="card-container mx-5">
             {/* <div className="card">
-              <h2>Hello Student!</h2>
-              <p>Let start learning  inequality</p>
+              <h4>Hello Student!</h4>
+              <p>It is good to see you again.</p>
             </div>
             <div className="card">
               <h4>Time to learn inequalities in graph</h4>
