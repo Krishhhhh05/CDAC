@@ -20,14 +20,14 @@ function Home() {
         < div class="flex justify-start items-center h-screen">
           <Sidebar />
           <div className="card-container mx-5">
-            <div className="card">
+            {/* <div className="card">
               <h4>Hello Student!</h4>
               <p>It is good to see you again.</p>
             </div>
             <div className="card">
               <h4>Time to learn inequalities in graph</h4>
               <p>Follow along the lectures and test yourself.</p>
-            </div>
+            </div> */}
 
             <h1> Lectures </h1>
             <div className="card flex flex-row text-center font-semibold mt-3 py-3 items-center justify-center">
@@ -102,6 +102,7 @@ function Home() {
                 <button type="button" class="btn btn-primary mx-6 my-2 py-2 px-10 h-10 w-20">Begin</button>
               </Link>
             </div>
+
             {/* <div className="card flex flex-row text-center font-semibold mt-3 py-3 items-center justify-center">
               <h2>Ask Doubts</h2>
             </div> */}
