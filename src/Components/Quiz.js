@@ -3,19 +3,19 @@ import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
 import { IoMdExit } from 'react-icons/io';
 import undrawIllustration from '../quiz.svg';
-// import './Style.css';
+import './Style.css';
 
 
 const questions = [
   {
-    question: "Isn't Yash the Best?",
-    options: ['Yes', 'No', 'Fuck Yes', 'Fuck NO'],
-    correctAnswer: 'Fuck Yes',
+    question: "Question 1?",
+    options: ['Yes', 'No', 'Right', 'Wrong'],
+    correctAnswer: 'Right',
   },
   {
-    question: 'Why are we doing this shit?',
-    options: ['Nashe', 'Pagal hai hum', 'attitude bc', 'aota'],
-    correctAnswer: 'aota',
+    question: 'Question 2?',
+    options: ['1', '2 ', '3 ', '4'],
+    correctAnswer: '3 ',
   },
 ];
 
@@ -101,34 +101,32 @@ const Quiz = () => {
 
   return (
     <>
-      <div className='App' style={{ backgroundImage: `url(${undrawIllustration})` }}>
-        <div className="quiz-container" >
-          <h1><strong>Test Yourself</strong></h1>
-          {questions.length > 0 && currentQuestion < questions.length && (
-            <div className="question">
-              <h3>Question {currentQuestion + 1}</h3>
-              <br></br>
-              <h2><p><strong>{questions[currentQuestion].question}</strong></p></h2>
-              <br></br>
-              <h5><italic><p>Select the correct answer:</p></italic></h5>
-              <div className="options">{renderOptions()}</div>
-              <br></br>
-              <br></br>
-              <div class="text-black p-6">
-                <div>
-                  <button className="exit-button" onClick={exitQuiz} title="Exit">
-                    <IoMdExit className="h-10 w-10 strong text-gray-500" />
-                  </button>
-                </div>
+      <div /*className='App' style={{ backgroundImage: `url(${undrawIllustration})` }}*/>
+        <h1><strong>Test Yourself</strong></h1>
+        {questions.length > 0 && currentQuestion < questions.length && (
+          <div className="question">
+            <h3>Question {currentQuestion + 1}</h3>
+            <br></br>
+            <h2><p><strong>{questions[currentQuestion].question}</strong></p></h2>
+            <br></br>
+            <h5><italic><p>Select the correct answer:</p></italic></h5>
+            <div className="options">{renderOptions()}</div>
+            <br></br>
+            <br></br>
+            <div class="text-black p-6">
+              <div>
+                <button className="exit-button" onClick={exitQuiz} title="Exit">
+                  <IoMdExit className="h-10 w-10 strong text-gray-500" />
+                </button>
               </div>
             </div>
-          )}
-          {questions.length === 0 || currentQuestion >= questions.length ? (
-            <div className="quiz-completed">
-              <h2>Quiz completed!</h2>
-            </div>
-          ) : null}
-        </div>
+          </div>
+        )}
+        {questions.length === 0 || currentQuestion >= questions.length ? (
+          <div className="quiz-completed">
+            <h2>Quiz completed!</h2>
+          </div>
+        ) : null}
       </div>
     </>
   );

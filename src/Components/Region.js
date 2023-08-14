@@ -16,6 +16,8 @@ const Region = () => {
   const [b, setB] = useState();
   const [c, setC] = useState();
   const [plotData, setPlotData] = useState(null);
+  const [hintUsed, setHintUsed] = useState(false);
+
 
   const handleExit = () => {
     Swal.fire({
@@ -133,16 +135,34 @@ const Region = () => {
       Swal.fire('Correct!', `Your answer is correct! Points earned: +${pointsEarned}`, 'success');
     } else {
       const pointsDeducted = 1;
+      const hintButtonText = hintUsed ? 'Try Again' : 'Use Hint';
+
       const result = await Swal.fire({
         icon: 'error',
         title: 'Incorrect!',
         text: `Your answer is incorrect. Points deducted: -${pointsDeducted}. What would you like to do?`,
         showCancelButton: true,
-        confirmButtonText: 'Retry',
+        confirmButtonText: hintButtonText,
         cancelButtonText: 'Go to Lecture',
       });
 
       if (result.isConfirmed) {
+        if (!hintUsed) {
+          setHintUsed(true);
+          Swal.fire({
+            icon: 'info',
+            title: 'Hint',
+            text: 'Here is a hint: [Your hint text here]',
+            showCancelButton: true,
+            confirmButtonText: 'Try Again',
+            cancelButtonText: 'Go to Lecture',
+          }).then((hintResult) => {
+            if (hintResult.isConfirmed) {
+            } else if (hintResult.dismiss === Swal.DismissReason.cancel) {
+              navigate('/theory3');
+            }
+          });
+        }
       } else if (result.dismiss === Swal.DismissReason.cancel) {
         navigate('/theory3');
       }
@@ -158,16 +178,34 @@ const Region = () => {
       Swal.fire('Correct!', `Your answer is correct! Points earned: +${pointsEarned}`, 'success');
     } else {
       const pointsDeducted = 1;
+      const hintButtonText = hintUsed ? 'Try Again' : 'Use Hint';
+
       const result = await Swal.fire({
         icon: 'error',
         title: 'Incorrect!',
         text: `Your answer is incorrect. Points deducted: -${pointsDeducted}. What would you like to do?`,
         showCancelButton: true,
-        confirmButtonText: 'Retry',
+        confirmButtonText: hintButtonText,
         cancelButtonText: 'Go to Lecture',
       });
 
       if (result.isConfirmed) {
+        if (!hintUsed) {
+          setHintUsed(true);
+          Swal.fire({
+            icon: 'info',
+            title: 'Hint',
+            text: 'Here is a hint: [Your hint text here]',
+            showCancelButton: true,
+            confirmButtonText: 'Try Again',
+            cancelButtonText: 'Go to Lecture',
+          }).then((hintResult) => {
+            if (hintResult.isConfirmed) {
+            } else if (hintResult.dismiss === Swal.DismissReason.cancel) {
+              navigate('/theory3');
+            }
+          });
+        }
       } else if (result.dismiss === Swal.DismissReason.cancel) {
         navigate('/theory3');
       }
@@ -175,8 +213,6 @@ const Region = () => {
       setPoints(points => Math.max(points - pointsDeducted, 0));
     }
   }
-
-
   return (
     <>
       <div className='App'>

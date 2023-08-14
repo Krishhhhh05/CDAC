@@ -17,6 +17,8 @@ function Multi(props) {
   const colors = ['blue', 'red', 'yellow', 'green'];
   const [randomColors, setRandomColors] = useState([]);
   const [correctAnswer, setCorrectAnswer] = useState('');
+  const [hintUsed, setHintUsed] = useState(false);
+
 
   useEffect(() => {
     const availableColors = [...colors];
@@ -77,16 +79,34 @@ function Multi(props) {
       Swal.fire('Correct!', `Your answer is correct! Points earned: +${pointsEarned}`, 'success');
     } else {
       const pointsDeducted = 1;
+      const hintButtonText = hintUsed ? 'Try Again' : 'Use Hint';
+
       const result = await Swal.fire({
         icon: 'error',
         title: 'Incorrect!',
         text: `Your answer is incorrect. Points deducted: -${pointsDeducted}. What would you like to do?`,
         showCancelButton: true,
-        confirmButtonText: 'Retry',
+        confirmButtonText: hintButtonText,
         cancelButtonText: 'Go to Lecture',
       });
 
       if (result.isConfirmed) {
+        if (!hintUsed) {
+          setHintUsed(true);
+          Swal.fire({
+            icon: 'info',
+            title: 'Hint',
+            text: 'Here is a hint: [Your hint text here]',
+            showCancelButton: true,
+            confirmButtonText: 'Try Again',
+            cancelButtonText: 'Go to Lecture',
+          }).then((hintResult) => {
+            if (hintResult.isConfirmed) {
+            } else if (hintResult.dismiss === Swal.DismissReason.cancel) {
+              navigate('/theory3');
+            }
+          });
+        }
       } else if (result.dismiss === Swal.DismissReason.cancel) {
         navigate('/theory3');
       }
@@ -94,7 +114,6 @@ function Multi(props) {
       setPoints(points => Math.max(points - pointsDeducted, 0));
     }
   }
-
   const handleExit = () => {
     Swal.fire({
       title: 'Are you sure you want to exit?',
@@ -190,16 +209,16 @@ function Multi(props) {
                   onChange={handleInputChange}
                 />
                 <br />
-              <label htmlFor="b">Enter the Intercept: </label>
-              <input
-                className="bg-white rounded-full mx-6 my-6 px-3"
-                id="b"
-                name="b"
-                type="text"
-                placeholder='Enter Intercept'
-                value={b}
-                onChange={handleInputChange}
-              />
+                <label htmlFor="b">Enter the Intercept: </label>
+                <input
+                  className="bg-white rounded-full mx-6 my-6 px-3"
+                  id="b"
+                  name="b"
+                  type="text"
+                  placeholder='Enter Intercept'
+                  value={b}
+                  onChange={handleInputChange}
+                />
               </div>
               <div className="flex justify-align">
                 {randomColors.map((color, index) => (
