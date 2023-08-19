@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import Plot from 'react-plotly.js';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
@@ -14,7 +14,7 @@ import { useNavigate } from 'react-router';
 function Multi(props) {
   const [a, setA] = useState('');
   const [b, setB] = useState('');
-  const colors = ['blue', 'red', 'yellow', 'green'];
+  const colors = useMemo(() => ['blue', 'red', 'yellow', 'green'], []);
   const [randomColors, setRandomColors] = useState([]);
   const [correctAnswer, setCorrectAnswer] = useState('');
   const [hintUsed, setHintUsed] = useState(false);
@@ -26,7 +26,7 @@ function Multi(props) {
     const correctAnswer = availableColors[randomIndex];
 
     setCorrectAnswer(correctAnswer);
-    availableColors.splice(randomIndex, 1); // Remove correct answer from available colors
+    availableColors.splice(randomIndex, 1);
 
     const randomizedColors = [correctAnswer];
     for (let i = 1; i < 4; i++) {
@@ -34,9 +34,8 @@ function Multi(props) {
       randomizedColors.push(availableColors[randomIndex]);
       availableColors.splice(randomIndex, 1);
     }
-
     setRandomColors(randomizedColors);
-  }, []);
+  }, [colors]);
 
   function computeY(x, a, b) {
     return a * x + b;
@@ -73,10 +72,31 @@ function Multi(props) {
   }, [points]);
 
   async function checkAnswer(color) {
+    if (a === '' || b === '') {
+      Swal.fire('Enter Values', 'Please enter values for slope and intercept before selecting an option.', 'warning');
+      return;
+    }
     if (color === correctAnswer) {
       const pointsEarned = 1;
       setPoints(points => points + pointsEarned);
       Swal.fire('Correct!', `Your answer is correct! Points earned: +${pointsEarned}`, 'success');
+      setA('');
+      setB('');
+      setHintUsed(false);
+
+      const availableColors = [...colors];
+      const randomIndex = Math.floor(Math.random() * availableColors.length);
+      const newCorrectAnswer = availableColors[randomIndex];
+      setCorrectAnswer(newCorrectAnswer);
+      availableColors.splice(randomIndex, 1);
+
+      const randomizedColors = [newCorrectAnswer];
+      for (let i = 1; i < 4; i++) {
+        const randomIndex = Math.floor(Math.random() * availableColors.length);
+        randomizedColors.push(availableColors[randomIndex]);
+        availableColors.splice(randomIndex, 1);
+      }
+      setRandomColors(randomizedColors);
     } else {
       const pointsDeducted = 1;
       const hintButtonText = hintUsed ? 'Try Again' : 'Use Hint';
@@ -233,7 +253,7 @@ function Multi(props) {
                   </button>
                 ))}
               </div>
-              <div className="text-center bg-white p-4 border-t-2 border-gray-300 ">
+              <div className="text-center bg-white p-4 border-t-2 border-gray-300 bg-gray-50">
                 <p>Total Points: {points}</p>
               </div>
             </div>
@@ -282,7 +302,7 @@ function Multi(props) {
                 title: 'Line Plot',
                 xaxis: { title: 'X Axis' },
                 yaxis: { title: 'Y Axis' },
-                showlegend: true,
+                showlegend: false,
               }}
             />
           </div>
