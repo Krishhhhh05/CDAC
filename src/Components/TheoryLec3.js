@@ -42,6 +42,7 @@ const TheoryLec3 = () => {
                 </article>
               </div>
             </div>
+
           </div>
         </div>
       </div>
@@ -50,3 +51,5 @@ const TheoryLec3 = () => {
 }
 
 export default TheoryLec3
+
+

@@ -20,6 +20,22 @@ function Home() {
           </div>
           <div className='col-span-5 flex items-center'>
 
+      <div className='App h-full'>
+
+        <div className='grid grid-cols-12 gap-4'>
+          <div className='col-span-2 flex items-center ml-7'>
+            <Sidebar />
+          </div>
+          <div className='col-span-5 flex items-center'>
+
+            <div className="">
+              <h3> LECTURES</h3>
+              <div className="card flex flex-row justify-between text-center font-semibold mt-3 py-3 px-16 items-center">
+                <h6 className='ml-6'>Explaining Inequations</h6>
+                <Link to="/theory1">
+                  <button type="button" class="btn btn-primary mx-6 my-2 py-2 px-10 ">View lecture</button>
+                </Link>
+              </div>
             <div className="">
               <h3> LECTURES</h3>
               <div className="card flex flex-row justify-between text-center font-semibold mt-3 py-3 px-16 items-center">
@@ -35,6 +51,12 @@ function Home() {
                   <button type="button" class="btn btn-primary mx-6 ">View lecture</button>
                 </Link>
               </div>
+              <div className="card flex flex-row justify-between text-center font-semibold mt-3 py-3 px-16 items-center">
+                <h6 className='ml-6'>Understanding Planes of Axis</h6>
+                <Link to="/theory2">
+                  <button type="button" class="btn btn-primary mx-6 ">View lecture</button>
+                </Link>
+              </div>
 
               <div className="card flex flex-row justify-between text-center font-semibold mt-3 py-3 px-16 items-center">
                 <h6 className='ml-6'> Plotting of Lines</h6>
@@ -42,7 +64,21 @@ function Home() {
                   <button type="button" class="btn btn-primary mx-6 my-2 py-2 px-10 ">View lecture</button>
                 </Link>
               </div>
+              <div className="card flex flex-row justify-between text-center font-semibold mt-3 py-3 px-16 items-center">
+                <h6 className='ml-6'> Plotting of Lines</h6>
+                <Link to="/theory3">
+                  <button type="button" class="btn btn-primary mx-6 my-2 py-2 px-10 ">View lecture</button>
+                </Link>
+              </div>
 
+              <div className="card flex flex-row justify-between text-center font-semibold mt-3 py-3 px-16 items-center">
+                <h6 className='ml-6'>Shading of Region</h6>
+                <Link to="/theory4">
+                  <button type="button" class="btn btn-primary mx-6 my-2 ">View lecture</button>
+                </Link>
+              </div>
+            </div>
+          </div>
               <div className="card flex flex-row justify-between text-center font-semibold mt-3 py-3 px-16 items-center">
                 <h6 className='ml-6'>Shading of Region</h6>
                 <Link to="/theory4">

@@ -28,7 +28,7 @@ function Sidebar() {
     return (
         <>
 
-            < div class="flex m-2 justify-start items-center h-screen">
+            < div class="">
                 <div id="sidebar" class="bg-black rounded-lg h-90 w-20 flex flex-col items-center">
                     <div class="text-white p-8">
                         <div>

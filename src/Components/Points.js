@@ -1,14 +1,5 @@
 import React, { useState } from 'react';
 import Plot from 'react-plotly.js';
-import { Link } from 'react-router-dom';
-import { AiFillHome } from 'react-icons/ai';
-import { IoLogoAndroid } from 'react-icons/io';
-import { FaGraduationCap } from 'react-icons/fa';
-import { IoLogoGameControllerB } from 'react-icons/io';
-import { BsPencilFill } from 'react-icons/bs';
-import { IoMdSettings } from 'react-icons/io';
-import { IoMdExit } from 'react-icons/io';
-import Swal from 'sweetalert2';
 
 
 const LinePlot = () => {
@@ -16,20 +7,6 @@ const LinePlot = () => {
   const [y1, setY1] = useState();
   const [x2, setX2] = useState();
   const [y2, setY2] = useState();
-
-  const handleExit = () => {
-    Swal.fire({
-      title: 'Are you sure you want to exit?',
-      showCancelButton: true,
-      confirmButtonText: 'No',
-      cancelButtonText: 'Yes, exit',
-      reverseButtons: true,
-    }).then((result) => {
-      if (result.dismiss === Swal.DismissReason.cancel) {
-        window.close();
-      }
-    });
-  };
 
   const handlePlot = () => {
     // Create a trace for the line
