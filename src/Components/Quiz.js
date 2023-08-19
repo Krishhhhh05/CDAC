@@ -2,20 +2,25 @@ import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
 import { IoMdExit } from 'react-icons/io';
-// import undrawIllustration from '../quiz.svg';
+import undrawIllustration from '../quiz.svg';
 import './Style.css';
 
 
 const questions = [
   {
-    question: "Question 1?",
-    options: ['Yes', 'No', 'Right', 'Wrong'],
-    correctAnswer: 'Right',
+    question: 'What symbols are used to represent inequalities?',
+    options: ['=', '>=', '<=', '=='],
+    correctAnswer: '<=',
   },
   {
-    question: 'Question 2?',
-    options: ['1', '2 ', '3 ', '4'],
-    correctAnswer: '3 ',
+    question: 'In the inequality 5x - 3 < 3x + 1, what is the solution for x?',
+    options: ['x > -2', 'x > 2', 'x = -2', 'x = 2'],
+    correctAnswer: 'x > -2',
+  },
+  {
+    question: 'Which of the following inequalities is not linear?',
+    options: ['2x - 3 > 5', '3x^2 + 4x < 10', '4 - x >= 7', '2y + 3x = 8'],
+    correctAnswer: '3x^2 + 4x < 10',
   },
 ];
 

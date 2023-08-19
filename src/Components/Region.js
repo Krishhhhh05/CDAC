@@ -35,6 +35,10 @@ const Region = () => {
 
 
   const handlePlot = () => {
+    if (a === '' || b === '' || c === '') {
+      Swal.fire('Enter Values', 'Please enter all values before selecting an option.', 'warning');
+      return;
+    }
     const x = [-10, 10];
     const y1 = x.map((xVal) => (-a * xVal - c) / b);
 
@@ -128,11 +132,19 @@ const Region = () => {
     localStorage.setItem('points', points.toString());
   }, [points]);
 
-  async function checkred(x, y) {
+  async function checkred() {
+    if (a === '' || b === '' || c === '') {
+      Swal.fire('Enter Values', 'Please enter values for slope and intercept before selecting an option.', 'warning');
+      return;
+    }
     if (a > 0 && b > 0 && c > 0) {
       const pointsEarned = 1;
       setPoints(points => points + pointsEarned);
       Swal.fire('Correct!', `Your answer is correct! Points earned: +${pointsEarned}`, 'success');
+      setA('');
+      setB('');
+      setC('');
+      setHintUsed(false);
     } else {
       const pointsDeducted = 1;
       const hintButtonText = hintUsed ? 'Try Again' : 'Use Hint';
@@ -171,11 +183,19 @@ const Region = () => {
     }
   }
 
-  async function checkgreen(x, y) {
+  async function checkgreen() {
+    if (a === '' || b === '' || c === '') {
+      Swal.fire('Enter Values', 'Please enter all values before selecting an option.', 'warning');
+      return;
+    }
     if (a < 0 || b < 0 || c < 0) {
       const pointsEarned = 1;
       setPoints(points => points + pointsEarned);
       Swal.fire('Correct!', `Your answer is correct! Points earned: +${pointsEarned}`, 'success');
+      setA('');
+      setB('');
+      setC('');
+      setHintUsed(false);
     } else {
       const pointsDeducted = 1;
       const hintButtonText = hintUsed ? 'Try Again' : 'Use Hint';
