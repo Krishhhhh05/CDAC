@@ -1,63 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Plot from 'react-plotly.js';
 
 function Multi() {
-  // Define state variables for equation entered by user
   const [a, setA] = useState('');
   const [b, setB] = useState('');
-  
+  const colors = ['blue', 'red', 'yellow', 'green'];
+  const [randomColors, setRandomColors] = useState([]);
+  const [correctAnswer, setCorrectAnswer] = useState('');
 
-  // Define a function to compute y values based on a linear equation
-  function computeY1(x) {
-    // Parse the user-entered equation as "ax + b" format
-    const parsedA = parseFloat(a);
-    const parsedB = parseFloat(b);
-    
-    // Compute y value for the given x value
-    return parsedA * x + parsedB;
+  useEffect(() => {
+    const availableColors = [...colors];
+    const randomIndex = Math.floor(Math.random() * availableColors.length);
+    const correctAnswer = availableColors[randomIndex];
+
+    setCorrectAnswer(correctAnswer);
+    availableColors.splice(randomIndex, 1); // Remove correct answer from available colors
+
+    const randomizedColors = [correctAnswer];
+    for (let i = 1; i < 4; i++) {
+      const randomIndex = Math.floor(Math.random() * availableColors.length);
+      randomizedColors.push(availableColors[randomIndex]);
+      availableColors.splice(randomIndex, 1);
+    }
+
+    setRandomColors(randomizedColors);
+  }, []);
+
+  function computeY(x, a, b) {
+    return a * x + b;
   }
 
-  function computeY2(x) {
-    // Parse the user-entered equation as "ax + b" format
-    
-    const parsedC = parseFloat(-a);
-    const parsedD = parseFloat(-b);
-
-    // Compute y value for the given x value
-    return parsedC * x + parsedD;
-  }
-
-
-  function computeY3(x) {
-    // Parse the user-entered equation as "ax + b" format
-    
-    const parsedE = parseFloat(a);
-    const parsedF = parseFloat(-b);
-
-    // Compute y value for the given x value
-    return parsedE * x + parsedF;
-  }
-
-  function computeY4(x) {
-    // Parse the user-entered equation as "ax + b" format
-    
-    const parsedG = parseFloat(-a);
-    const parsedH = parseFloat(b);
-
-    // Compute y value for the given x value
-    return parsedG * x + parsedH;
-  }
-
-  // Create an array of x values using lodash range function
   const x = Array.from({ length: 100 }, (_, i) => i / 10 - 5);
 
-  // Compute an array of y values from x values using the defined function
-  const y1 = x.map(computeY1);
-  const y2 = x.map(computeY2);
-  const y3 = x.map(computeY3);
-  const y4 = x.map(computeY4);
+  const y1 = x.map(xVal => computeY(xVal, parseFloat(a), parseFloat(b)));
+  const y2 = x.map(xVal => computeY(xVal, -parseFloat(a), -parseFloat(b)));
+  const y3 = x.map(xVal => computeY(xVal, parseFloat(a), -parseFloat(b)));
+  const y4 = x.map(xVal => computeY(xVal, -parseFloat(a), parseFloat(b)));
 
-  // Handle input change event and update the a and b state variables
   function handleInputChange(event) {
     const { name, value } = event.target;
     if (name === 'a') {
@@ -65,31 +44,68 @@ function Multi() {
     } else if (name === 'b') {
       setB(value);
     }
-    
   }
-  // flex items-center float-right w-1/3 h-screen
+
+  function checkAnswer(color) {
+    if (color === correctAnswer) {
+      alert('Correct!');
+    } else {
+      alert('Incorrect!');
+    }
+  }
+
   return (
     <>
-    
-    
-    <div  class=" mr-5 px-6 mt-2 fixed-right  float-right border-2 w-1/3   p-4 border-b-4 border-gray-200 rounded-xl bg-gray-50">
-        
-        <h1 class=" font-bold text-lg text-center"> Understanding the game</h1>
-
-        <div className='p-3'>
-          The lines here are in the form of <b>Y=mX+C </b><br></br><br></br>
-          Enter some X and Y coordinates.<br></br><br></br>
-          It will then plot 4 lines corresponding to your coordinates. <br></br><br></br>
-          Choose the correct lines from the option. <br></br>
-
-        </div>
+      <div className="px-6">
+        <div className="mr-5 fixed-left my-36 float-right border-2 w-1/3 p-4 border-b-4 border-gray-200 rounded-xl bg-gray-50">
+          <h1 className="font-bold text-lg text-center">Plotting the Equation</h1>
           <br />
+          <div className="font-light">
+            Here the equation is in the form of <b>Y = mX + C</b>
+            <br />
+            <br />
+            Enter the values and select which line correctly plots the equation.
+          </div>
+          <div className="" id="input">
+            <div className="a" ID="INPUT">
+              <label htmlFor="a">Enter the slope: </label>
+              <input
+                className="bg-white rounded-full mx-6 my-6 px-3"
+                id="a"
+                name="a"
+                type="text"
+                value={a}
+                onChange={handleInputChange}
+              />
+              <br />
+            </div>
+            <label htmlFor="b">Enter the Intercept: </label>
+            <input
+              className="bg-white rounded-full mx-6 my-6 px-3"
+              id="b"
+              name="b"
+              type="text"
+              value={b}
+              onChange={handleInputChange}
+            />
+            <div className="flex justify-align">
+              {randomColors.map((color, index) => (
+                <button
+                  key={index}
+                  type="button"
+                  className={`btn ${color === correctAnswer ? 'btn-success' : 'btn-danger'} mx-2`}
+                  style={{ backgroundColor: color }}
+                  onClick={() => checkAnswer(color)}
+                >
+                  {color.charAt(0).toUpperCase() + color.slice(1)}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
 
-       
-      
-
-      <div id="graph" class=" float-left ml-5 px-4 my-4 ">
+      <div id="graph" className="float-left ml-5 px-4 my-4">
         <Plot
           data={[
             {
@@ -97,67 +113,44 @@ function Multi() {
               y: y1,
               type: 'scatter',
               mode: 'lines',
-              line: { color: 'red' },
+              name: randomColors[0],
+              line: { color: randomColors[0] },
             },
             {
-                x: x,
-                y: y2,
-                type: 'scatter',
-                mode: 'lines',
-                line: { color: 'blue' },
-              },
-              {
-                x: x,
-                y: y3,
-                type: 'scatter',
-                mode: 'lines',
-                line: { color: 'green' },
-              },
-              {
-                x: x,
-                y: y4,
-                type: 'scatter',
-                mode: 'lines',
-                line: { color: 'yellow' },
-              },
+              x: x,
+              y: y2,
+              type: 'scatter',
+              mode: 'lines',
+              name: randomColors[1],
+              line: { color: randomColors[1] },
+            },
+            {
+              x: x,
+              y: y3,
+              type: 'scatter',
+              mode: 'lines',
+              name: randomColors[2],
+              line: { color: randomColors[2] },
+            },
+            {
+              x: x,
+              y: y4,
+              type: 'scatter',
+              mode: 'lines',
+              name: randomColors[3],
+              line: { color: randomColors[3] },
+            },
           ]}
           layout={{
             width: 800,
             height: 600,
-            title: 'Line Graph of Equation',
+            title: 'Line Plot',
             xaxis: { title: 'X Axis' },
             yaxis: { title: 'Y Axis' },
+            showlegend: true,
           }}
         />
       </div>
-
-      <div id=" input" class=" mr-5  mt-2 fixed-lef float-right border-2 w-1/3   p-4 border-b-4 border-gray-200 rounded-xl bg-gray-50">
-          <h1 class=" font-bold text-lg text-center"> Plotting the Equation</h1>
-          <br />
-          <div className='' id='input'>
-          <div class="a" ID="INPUT">
-            <label htmlFor="a">Enter the slope: </label>
-            <input class="bg-white rounded-full mx-6 my-6 px-3"
-              id="a"
-              name="a"
-              type="text"
-              value={a}
-              onChange={handleInputChange}
-            />
-            <br />
-          </div>
-          <label htmlFor="b">Enter the Intercept: </label>
-          <input class="bg-white rounded-full mx-6 my-6 px-3"
-            id="b"
-            name="b"
-            type="text"
-            value={b}
-            onChange={handleInputChange}
-          />
-
-           
-          </div>
-        </div>
     </>
   );
 }

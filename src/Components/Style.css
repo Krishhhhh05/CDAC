@@ -1,27 +1,28 @@
 .App {
-    background-image: linear-gradient(to right, rgb(137, 230, 230), white);
-  }
+  background-image: linear-gradient(to right, rgb(137, 230, 230), rgb(204, 250, 253));
+}
 
-  .card-container {
-    display: flex;
-    flex-direction: column;
-    margin: 5%;
-    padding: 10px;
-  }
-  
-  .card {
-    text-align: left;
-    background-color: #cbcbca;
-    width: 500px;
-    border-radius: 50%;
-    border-radius: 4px;
-    box-shadow: 0 10px 14px rgba(0, 0, 0, 0.1);
-    padding: 6px;
-    margin-bottom: 20px;
-  }
+.card-container {
+  display: flex;
+  flex-direction: column;
+  margin: 5%;
+  padding: 10px;
+}
 
-  .btn-primary {
-    align-items: end;
-    background-color: black;
-    color: white;
-  }
+.card {
+  text-align: center;
+  background-color: #ffffff;
+  width: 500px;
+  border-radius: 80%;
+  border-radius: 8px;
+  box-shadow: 0 10px 14px rgba(0, 0, 0, 0.1);
+  padding: 6px;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  align-items: end;
+  background-color: black;
+  color: white;
+  font-size: 12px;
+}

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Plot from 'react-plotly.js';
 
@@ -34,7 +33,7 @@ function PlotGraph() {
   }
 
   // Compute an array of y values for the fill region
-  
+
   return (
     <>
       <div class="px-6">
@@ -75,12 +74,6 @@ function PlotGraph() {
               mode: 'lines',
               line: { color: 'red' },
             },
-            {
-              x: x,
-              type: 'scatter',
-              mode: 'lines',
-              line: { color: 'transparent' },
-            },
           ]}
           layout={{
             width: 800,
@@ -88,11 +81,10 @@ function PlotGraph() {
             title: 'Line Graph of Equation',
             xaxis: { title: 'X Axis' },
           }}
-                  />
-                </div>
-              </>
-            );
-          }
-          
-          export default PlotGraph;
-          
+        />
+      </div>
+    </>
+  );
+}
+
+export default PlotGraph;

@@ -1,8 +1,10 @@
 import React from 'react'
+import Sidebar from './Sidebar'
 
 const TheoryLec3 = () => {
   return (
-    <div>
+    <div className=' App p-5 h-full fixed'>
+      <Sidebar/>
       <section>
         <center><h2>Plotting of Lines</h2></center>
         <article>

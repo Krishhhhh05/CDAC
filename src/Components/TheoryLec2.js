@@ -1,8 +1,11 @@
 import React from 'react'
+import './Style.css';
+import Sidebar from './Sidebar';
 
 const TheoryLec2 = () => {
   return (
-    <div>
+    <div className=' App p-5 h-full'>
+      <Sidebar/>
         <section>
         <center><h2>Understanding Planes of Axis</h2></center>
         <article>

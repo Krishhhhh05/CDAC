@@ -1,11 +1,13 @@
 import React from 'react'
+import Sidebar from './Sidebar'
 
 const TheoryLec4 = () => {
   return (
-    <div>
+    <div className=' App p-5 h-full'>
             <section>
+              <Sidebar/>
         <center><h2>Shading of Region</h2></center>
-        <article>
+        <aside>
           <p>To shade the region in an inequality with respect to lines, you need to identify the half-plane that contains the solutions to the inequality. Here are the steps:
 
 Rewrite the inequality in slope-intercept form, y = mx + b, if it is not already in that form.
@@ -19,8 +21,8 @@ Substitute the coordinates of the test point into the inequality. If the inequal
 Label the shaded region with the inequality symbol and any other relevant information.
 
 For example, if the inequality is y &lt; 2x + 3, you would graph the line y = 2x + 3 with a dashed line (because the inequality is "less than"). Then, you would choose a test point, such as (0,0), and substitute the values into the inequality to get 0 &lt; 2(0) + 3. Since this is true, you would shade the half-plane that contains the origin (which is the region below the dashed line). Finally, you would label the shaded region with the inequality symbol, y &lt; 2x + 3, and any other relevant information.</p>
-        </article>
-        <center><img src="../assets/theorylec4.jpg" alt="Shading of Region"></img></center>
+        </aside>
+        <center><img  className=" h-1/2 w-1/2"src="../assets/theorylec4.jpg" alt="Shading of Region"></img></center>
       </section>
     </div>
   )
