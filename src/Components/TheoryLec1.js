@@ -1,6 +1,8 @@
 import React from 'react';
 import './Style.css';
 import Sidebar from './Sidebar';
+// import { Link } from 'react-router-dom';
+// import { IoMdSkipForward } from 'react-icons/io';
 
 
 const TheoryLec1 = () => {
@@ -188,16 +190,9 @@ const TheoryLec1 = () => {
                                 Graphing Inequalities
                                 While graphing the line
                                 "</div>
+                            <div className="flex justify-end mt-4">
+                            </div>
                         </div>
-                        {/* <div className='m-8 place-content-center'>
-                            <p>Inequations with respect to lines are mathematical expressions that show a relationship between two values that are not necessarily equal, where one of the values is represented by a linear equation. These inequations can be represented graphically as a shaded region on a coordinate plane.
-
-                                For example, the inequation y {'<'} ; mx + b, where m and b are constants and x and y are variables, represents all the points on the coordinate plane that lie below the line y = mx + b. This is because any point below the line will have a y-value that is less than mx + b, which satisfies the inequality. Any point above the line will have a y-value that is greater than mx + b, which does not satisfy the inequality.
-
-                                Similarly, the inequation y {'>'}; mx + b represents all the points on the coordinate plane that lie above the line y = mx + b. In this case, any point above the line will have a y-value that is greater than mx + b, which satisfies the inequality, while any point below the line will have a y-value that is less than mx + b, which does not satisfy the inequality.
-
-                                In general, inequations with respect to lines can take the form y {'<'} ; mx + b, y {'>'}; mx + b, y ≤ mx + b, y ≥ mx + b, or other variations. The solution to the inequation is the set of all points on the coordinate plane that satisfy the relationship expressed by the inequality and can be represented graphically as a shaded region on the coordinate plane.</p>
-                                </div> */}
                     </div>
                 </div>
             </div>
