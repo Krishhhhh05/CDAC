@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
 import { IoMdExit } from 'react-icons/io';
-import undrawIllustration from '../quiz.svg';
+// import undrawIllustration from '../quiz.svg';
 import './Style.css';
 
 

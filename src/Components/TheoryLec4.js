@@ -8,7 +8,7 @@ import { BsPencilFill } from 'react-icons/bs';
 import { IoMdSettings } from 'react-icons/io';
 import { IoMdExit } from 'react-icons/io';
 import Swal from 'sweetalert2';
-
+import Sidebar from './Sidebar';
 
 const TheoryLec4 = () => {
 
