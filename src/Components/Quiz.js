@@ -8,16 +8,27 @@ import './Style.css';
 
 const questions = [
   {
-    question: "Question 1?",
-    options: ['Yes', 'No', 'Right', 'Wrong'],
-    correctAnswer: 'Right',
+    question: "Consider the following system of inequalities: A. y > x + 1  B. y < 10 C. x > 1  Which of the following is NOT in the feasible region of this system?",
+    options: ['(2, 4)', '(3, 8)', '(5, 6)', ' (6, 6)'],
+    correctAnswer: ' (6, 6)',
   },
   {
-    question: 'Question 2?',
-    options: ['1', '2 ', '3 ', '4'],
-    correctAnswer: '3 ',
+    question: 'What symbols are used to represent inequalities?',
+    options: ['=', '>=', '<=', '=='],
+    correctAnswer: '<=',
+  },
+  {
+    question: 'In the inequality 5x - 3 < 3x + 1, what is the solution for x?',
+    options: ['x < -2', 'x > -2', 'x = -2', 'x = 2'],
+    correctAnswer: 'x > -2',
+  },
+  {
+    question: 'Which of the following inequalities is not linear?',
+    options: ['2x - 3 > 5', '3x^2 + 4x < 10', '4 - x >= 7', '2y + 3x = 8'],
+    correctAnswer: '3x^2 + 4x < 10',
   },
 ];
+
 
 const Quiz = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -78,7 +89,6 @@ const Quiz = () => {
 
   const renderOptions = () => {
     const options = questions[currentQuestion].options;
-    const optionLabels = ['A', 'B', 'C', 'D'];
 
     return options.map((option, index) => (
       <>
@@ -91,7 +101,6 @@ const Quiz = () => {
               checked={selectedAnswer === option}
               onChange={() => handleAnswerClick(option)}
             />
-            <span>{optionLabels[index]}. </span>
             {option}
           </label>
         </div>
@@ -101,33 +110,39 @@ const Quiz = () => {
 
   return (
     <>
-      <div /*className='App' style={{ backgroundImage: `url(${undrawIllustration})` }}*/>
-        <h1><strong>Test Yourself</strong></h1>
-        {questions.length > 0 && currentQuestion < questions.length && (
-          <div className="question">
-            <h3>Question {currentQuestion + 1}</h3>
-            <br></br>
-            <h2><p><strong>{questions[currentQuestion].question}</strong></p></h2>
-            <br></br>
-            <h5><italic><p>Select the correct answer:</p></italic></h5>
-            <div className="options">{renderOptions()}</div>
-            <br></br>
-            <br></br>
-            <div class="text-black p-6">
-              <div>
-                <button className="exit-button" onClick={exitQuiz} title="Exit">
-                  <IoMdExit className="h-10 w-10 strong text-gray-500" />
-                </button>
+      <div className="flex items-center justify-center h-screen w-1/2 my-8">
+        <div className="bg-white rounded-lg p-8">
+          
+        <div className="relative">
+          <button className="exit-button absolute top-2 right-2" onClick={exitQuiz} title="Exit">
+      <IoMdExit className="h-6 w-6 text-gray-500" />
+    </button>
+            <h1><strong>Test Yourself</strong></h1>
+            {questions.length > 0 && currentQuestion < questions.length && (
+              <div className="question">
+                <h6>Question {currentQuestion + 1}</h6>
+                <br></br>
+                <h4><p>{questions[currentQuestion].question}</p></h4>
+                <br></br>
+                <h5><italic><p>Select the correct answer:</p></italic></h5>
+                <div className="options">{renderOptions()}</div>
+                <br></br>
+                <br></br>
+                <div class="text-black p-6">
+
+
+                </div>
               </div>
-            </div>
-          </div>
-        )}
-        {questions.length === 0 || currentQuestion >= questions.length ? (
-          <div className="quiz-completed">
-            <h2>Quiz completed!</h2>
-          </div>
-        ) : null}
+            )}
+            {questions.length === 0 || currentQuestion >= questions.length ? (
+              <div className="quiz-completed">
+                <h2>Quiz completed!</h2>
+              </div>
+            ) : null}
+          </div>  </div>
       </div>
+
+
     </>
   );
 };
