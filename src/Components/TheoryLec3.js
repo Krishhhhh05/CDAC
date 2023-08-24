@@ -6,8 +6,6 @@ import Sidebar from './Sidebar';
 
 const TheoryLec3 = () => {
 
-
-
   return (
     <>
       <div className=''>
@@ -42,6 +40,7 @@ const TheoryLec3 = () => {
                 </article>
               </div>
             </div>
+
           </div>
         </div>
       </div>

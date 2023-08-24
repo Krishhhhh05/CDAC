@@ -56,8 +56,6 @@ function PlotGraph() {
     }
   }
 
-  // Compute an array of y values for the fill region
-
   return (
     <>
       <div className='App'>

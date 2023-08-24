@@ -1,8 +1,6 @@
 import React from 'react';
 import './Style.css';
 import Sidebar from './Sidebar';
-// import { Link } from 'react-router-dom';
-// import { IoMdSkipForward } from 'react-icons/io';
 
 
 const TheoryLec1 = () => {

@@ -35,8 +35,8 @@ const Region = () => {
 
 
   const handlePlot = () => {
-    if (a === '' || b === '' || c === '') {
-      Swal.fire('Enter Values', 'Please enter all values before selecting an option.', 'warning');
+    if (a === '' || b === '' || c === '' || isNaN(a) || isNaN(b) || isNaN(c)) {
+      Swal.fire('Missing Values', 'Please enter values for slope and intercept before selecting an option.', 'warning');
       return;
     }
     const x = [-10, 10];
@@ -133,8 +133,8 @@ const Region = () => {
   }, [points]);
 
   async function checkred() {
-    if (a === '' || b === '' || c === '') {
-      Swal.fire('Enter Values', 'Please enter values for slope and intercept before selecting an option.', 'warning');
+    if (a === '' || b === '' || c === '' || isNaN(a) || isNaN(b) || isNaN(c)) {
+      Swal.fire('Missing Values', 'Please enter values for slope and intercept before selecting an option.', 'warning');
       return;
     }
     if (a > 0 && b > 0 && c > 0) {
@@ -184,8 +184,8 @@ const Region = () => {
   }
 
   async function checkgreen() {
-    if (a === '' || b === '' || c === '') {
-      Swal.fire('Enter Values', 'Please enter all values before selecting an option.', 'warning');
+    if (a === '' || b === '' || c === '' || isNaN(a) || isNaN(b) || isNaN(c)) {
+      Swal.fire('Missing Values', 'Please enter values for slope and intercept before selecting an option.', 'warning');
       return;
     }
     if (a < 0 || b < 0 || c < 0) {
@@ -329,7 +329,7 @@ const Region = () => {
             <br></br>
             <button class="btn btn-primary mx-6 my-2 " onClick={handlePlot}>Plot</button>
             <div className=' flex justify-align' style={{ alignItems: 'center' }}>
-              <button type="button" class="btn btn-danger mx-2" onClick={() => checkred(a, b)}>Red</button>
+              <button type="button" class="btn btn-danger mx-2" onClick={() => checkred(a, b)} >Red</button>
               <button type="button" class="btn btn-success mr-2 ml-5" onClick={() => checkgreen(a, b)}>Green</button>
             </div>
             <div className="text-center bg-white p-4 border-t-2 border-gray-300">
