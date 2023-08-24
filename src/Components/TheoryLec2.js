@@ -5,7 +5,7 @@ import Sidebar from './Sidebar';
 const TheoryLec2 = () => {
 
   return (
-    <>
+        <>
       <div className=''>
         <div className='grid grid-cols-12 gap-4'>
           <div className='col-span-1 flex items-center ml-7'>
@@ -104,10 +104,9 @@ const TheoryLec2 = () => {
             </div>
 
           </div>
-        </div>
-      </div>
-    </>
-  )
+          </div>
+          </div>
+        </>
+        )
 }
-
-export default TheoryLec2
+        export default TheoryLec2

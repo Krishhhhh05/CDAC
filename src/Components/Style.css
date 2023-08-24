@@ -1,5 +1,5 @@
 .App {
-  background-image: linear-gradient(to right, rgb(137, 230, 230), white);
+  background-image: linear-gradient(to right, rgb(137, 230, 230), rgb(204, 250, 253));
 }
 
 .card-container {
@@ -10,6 +10,7 @@
 }
 
 .card {
+
   text-align: left;
   background-color: #cbcbca;
   width: 500px;
@@ -24,6 +25,7 @@
   align-items: end;
   background-color: black;
   color: white;
+  font-size: 12px;
 }
 
 #root {

@@ -26,10 +26,7 @@ function App() {
 return(
   
   <Routes>
-    {/* <Route path='/cards' element={<Cards />}/> */}
     <Route path='/region' element={<Region />}/>
-    {/* <Route path='/areagraph' element={<AreaGraph />}/> */}
-    {/* <Route path='/example' element={<Example />}/> */}
     <Route path='/plot' element={<PlotGraph />}/>
     <Route path='/theory1' element={<TheoryLec1 />}/>
     <Route path='/theory2' element={<TheoryLec2 />}/>
