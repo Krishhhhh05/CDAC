@@ -1,7 +1,5 @@
 import React from 'react';
-import './Style.css';
 import Sidebar from './Sidebar';
-
 
 const TheoryLec4 = () => {
 

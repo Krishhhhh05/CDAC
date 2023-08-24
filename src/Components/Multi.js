@@ -253,7 +253,7 @@ function Multi(props) {
                   </button>
                 ))}
               </div>
-              <div className="text-center bg-white p-4 border-t-2 border-gray-300 bg-gray-50">
+              <div className="text-center bg-white p-4 border-t-2 border-gray-300 ">
                 <p>Total Points: {points}</p>
               </div>
             </div>
