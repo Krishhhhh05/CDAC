@@ -10,7 +10,6 @@ import { IoMdSettings } from 'react-icons/io';
 import { IoMdExit } from 'react-icons/io';
 import Swal from 'sweetalert2';
 
-
 const LinePlot = () => {
   const [x1, setX1] = useState();
   const [y1, setY1] = useState();

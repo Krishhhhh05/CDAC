@@ -6,8 +6,6 @@ import Sidebar from './Sidebar';
 
 const TheoryLec3 = () => {
 
-
-
   return (
     <>
       <div className=''>
