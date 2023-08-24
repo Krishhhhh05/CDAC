@@ -1,7 +1,14 @@
 import React from 'react';
-import './Style.css';
+import { Link } from 'react-router-dom';
+import { AiFillHome } from 'react-icons/ai';
+import { IoLogoAndroid } from 'react-icons/io';
+import { FaGraduationCap } from 'react-icons/fa';
+import { IoLogoGameControllerB } from 'react-icons/io';
+import { BsPencilFill } from 'react-icons/bs';
+import { IoMdSettings } from 'react-icons/io';
+import { IoMdExit } from 'react-icons/io';
+import Swal from 'sweetalert2';
 import Sidebar from './Sidebar';
-
 
 const TheoryLec4 = () => {
 

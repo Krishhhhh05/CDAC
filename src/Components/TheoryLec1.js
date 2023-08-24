@@ -4,7 +4,6 @@ import Sidebar from './Sidebar';
 
 
 const TheoryLec1 = () => {
-
     return (
         <>
             <div className=''>
