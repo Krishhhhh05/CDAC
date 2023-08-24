@@ -52,4 +52,3 @@ const TheoryLec3 = () => {
 
 export default TheoryLec3
 
-

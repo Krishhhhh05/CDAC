@@ -114,4 +114,3 @@ Finally, the point (2, 3) is located on the first quadrant of the cartesian plan
 }
 
         export default TheoryLec2
-
