@@ -291,13 +291,13 @@ const Region = () => {
               </div>
             </div>
           </div>
-          <div id="input" class="mr-5 top-4 fixed-left float-right border-2 w-1/3 p-4 border-b-4 border-gray-200 rounded-xl bg-gray-50">
-            <h1 class=" font-bold text-lg text-center"> Shading the region</h1>
+          <div id="input" class="ml-12 mr-14 top-4 fixed-left float-right border-2 w-1/3 p-4 border-b-4 border-gray-200 rounded-xl bg-gray-50">
+            <h1 class=" font-bold text-lg text-center"> <br />Shading the region</h1>
 
-            Here we use the equation-<br></br><br></br>
-            <img src="../assets/main.png" alt="main_eq" style={{ width: '50%', height: '2%', }}></img><br></br>
+            <br /><br /><p class="ml-8 text-left">Here we use the equation-</p>
+            <img src="../assets/main.png" alt="main_eq" style={{ width: '38%', height: '2%', }}></img>
             The entire graph is divided into 2 parts and shaded positive or negative according to the equation.
-            Identify the Region which represent the postive region i.e. Ax+By+C is greater than zero
+            Identify the Region which represent the postive region <br />i.e. Ax+By+C is greater than zero
             <br></br>
             <label>
               a:

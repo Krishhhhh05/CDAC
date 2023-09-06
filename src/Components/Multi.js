@@ -206,18 +206,18 @@ function Multi(props) {
               </div>
             </div>
           </div>
-
+          <div class="px-6">
           <div className="mr-5 fixed-left my-45 float-right border-2 w-2/3 p-4 border-b-4 border-gray-200 rounded-xl bg-gray-50">
-            <h1 className="font-bold text-lg text-center">Plotting the Equation</h1>
+            <h1 className="font-bold text-lg text-center"><br />Plotting the Equation</h1>
             <br />
             <div className="font-light">
-              Here the equation is in the form of <b>Y = mX + C</b>
+              Here the equation is in the form of      <b><br />Y = mX + C</b>
               <br />
               <br />
               Enter the values and select which line correctly plots the equation.
             </div>
             <div className="" id="input">
-              <div className="a" ID="INPUT">
+              <div className="a" ID="INPUT"><br />
                 <label htmlFor="a">Enter the slope: </label>
                 <input
                   className="bg-white rounded-full mx-6 my-6 px-3"
@@ -258,7 +258,7 @@ function Multi(props) {
               </div>
             </div>
           </div>
-
+          </div>
 
           <div id="graph" className="float-left ml-5 px-4 my-4">
             <Plot

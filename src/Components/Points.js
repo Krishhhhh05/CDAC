@@ -133,30 +133,31 @@ const LinePlot = () => {
               </div>
             </div>
           </div>
-
+<div class="px-6">
           <div class="mr-5 fixed-left float-right mt-8 h-3/4 border-2 w-2/2 px-4 py-auto border-b-4 border-gray-200 rounded-xl bg-gray-50">
-            <h1 class="font-bold text-lg text-center">Plotting the points</h1>
+            <h1 class="font-bold text-lg text-center"><br />Plotting the points</h1><br />
 
               Here we enter the coordinates of the two lines and plot them on the graph.
               <br></br>
               <br></br>
               We can calculate the slope of the line with the formula:
-              <br></br>
+              <br></br><br />
               <img
                 src="../assets/slope formula.png"
                 alt="Understanding of Planes and Axis" style={{ width: '100%', height: '20%', }}
-              ></img>
+              ></img><br />
+          </div>
           </div>
 
           <div id="graph" class="float-left ml-5 px-4 my-4">
             {handlePlot()}
           </div>
-          <div class="mr-5 fixed-left float-right mt-8 h-3/4 border-2 w-1/3 px-4 py-auto border-b-4 border-gray-200 rounded-xl bg-gray-50">
-              <h2 class="font-semibold text-lg text-center">Enter the coordinates of Line 1</h2>
+          
+          <div class="mr-5 fixed-left float-right mt-8 h-3/4 border-2 w-1/3 px-4 py-6 border-b-4 border-gray-200 rounded-xl bg-gray-50">
+              <h2 class="font-semibold text-lg text-center"><br /><br />Enter the coordinates of Line 1</h2>
 
               <label>
-                X1:{' '}
-                <input
+                X1:{' '}<input
                   type="number"
                   className="bg-white rounded-full mx-6 my-6 px-3"
                   placeholder='Enter X1'
@@ -175,7 +176,7 @@ const LinePlot = () => {
                 />
               </label>
 
-              <h2 class="font-semibold text-lg text-center">Enter the coordinates of Line 2</h2>
+              <h2 class="font-semibold text-lg text-center"><br />Enter the coordinates of Line 2</h2>
 
               <label>
                 X2:{' '}
