@@ -68,7 +68,7 @@ const TheoryLec1 = () => {
                                 <br></br>
                                 <h5>When there is an inequality with 2 variables with the degree being 1 it represents a region on the graph.</h5>
                                 <div className="flex justify-between mt-8">
-                                    <Link to="/home"><button class="btn btn-primary font-bold py-2 px-4 mb-2 rounded">Home</button> </Link>
+                                    <Link to="/"><button class="btn btn-primary font-bold py-2 px-4 mb-2 rounded">Home</button> </Link>
                                     {/* <Link to="/theory2"><button class="btn btn-primary font-bold py-2 px-4 mb-2 rounded">Game</button></Link> */}
                                     <Link to="/theory2"><button class="btn btn-primary font-bold py-2 px-4 mb-2 rounded">Next Lecture</button></Link>
                                 </div>
