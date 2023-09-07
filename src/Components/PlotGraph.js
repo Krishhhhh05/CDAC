@@ -114,9 +114,9 @@ function PlotGraph() {
               </div>
             </div>
           </div>
-          <div class="px-6">
+          <div >
 
-            <div id="input" class="mr-5 fixed-left float-right border-2 w-96 max-w-3xl p-4 border-b-4 border-gray-200 rounded-xl bg-gray-50">
+            <div id="input" class="ml-6 mr-4 fixed-left float-right border-2 w-96 max-w-3xl p-4 border-b-4 border-gray-200 rounded-xl bg-gray-50">
               <h1 class="font-bold text-lg text-center"> Plotting the Equation</h1>
               <br />
               <div class="">
@@ -162,6 +162,7 @@ function PlotGraph() {
                 title: 'Line Graph of Equation',
                 xaxis: { title: 'X Axis' },
               }}
+              config={{ displayModeBar: false }}
             />
           </div>
         </div>

@@ -14,7 +14,7 @@ import { useNavigate } from 'react-router';
 function Multi(props) {
   const [a, setA] = useState('');
   const [b, setB] = useState('');
-  const colors = useMemo(() => ['blue', 'red', 'yellow', 'green'], []);
+  const colors = useMemo(() => ['blue', 'red', 'orange', 'green'], []);
   const [randomColors, setRandomColors] = useState([]);
   const [correctAnswer, setCorrectAnswer] = useState('');
   const [hintUsed, setHintUsed] = useState(false);
@@ -207,7 +207,7 @@ function Multi(props) {
             </div>
           </div>
           <div class="px-6">
-          <div className="mr-5 fixed-left my-45 float-right border-2 w-2/3 p-4 border-b-4 border-gray-200 rounded-xl bg-gray-50">
+          <div className="mr-16 fixed-left my-45 float-right border-2 w-2/3 p-4 border-b-4 border-gray-200 rounded-xl bg-gray-50">
             <h1 className="font-bold text-lg text-center"><br />Plotting the Equation</h1>
             <br />
             <div className="font-light">
@@ -240,6 +240,7 @@ function Multi(props) {
                   onChange={handleInputChange}
                 />
               </div>
+              <br />
               <div className="flex justify-align">
                 {randomColors.map((color, index) => (
                   <button
@@ -253,7 +254,8 @@ function Multi(props) {
                   </button>
                 ))}
               </div>
-              <div className="text-center bg-white p-4 border-t-2 border-gray-300 bg-gray-50">
+              <br />
+              <div className="text-center p-4 border-t-2 border-gray-300 bg-gray-50">
                 <p>Total Points: {points}</p>
               </div>
             </div>
@@ -304,6 +306,7 @@ function Multi(props) {
                 yaxis: { title: 'Y Axis' },
                 showlegend: false,
               }}
+              config={{ displayModeBar: false }}
             />
           </div>
         </div >

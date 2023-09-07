@@ -291,17 +291,33 @@ const Region = () => {
               </div>
             </div>
           </div>
-          <div id="input" class="ml-12 mr-14 top-4 fixed-left float-right border-2 w-1/3 p-4 border-b-4 border-gray-200 rounded-xl bg-gray-50">
-            <h1 class=" font-bold text-lg text-center"> <br />Shading the region</h1>
+          <div id="input" class="ml-6 mr-6 top-4 fixed-left float-right border-2 w-1/3 p-4 border-b-4 border-gray-200 rounded-xl bg-gray-50">
+            <h1 class=" font-bold text-lg text-center"> Shading the region</h1>
 
-            <br /><br /><p class="ml-8 text-left">Here we use the equation-</p>
-            <img src="../assets/main.png" alt="main_eq" style={{ width: '38%', height: '2%', }}></img>
+            <br />Here we use the equation-
+            <img src="../assets/main.png" alt="main_eq" style={{align: 'center' ,width: '70%', height: '2%', }}></img>
             The entire graph is divided into 2 parts and shaded positive or negative according to the equation.
-            Identify the Region which represent the postive region <br />i.e. Ax+By+C is greater than zero
+            Identify the Region which represent the postive region i.e. <br />a<b>x</b>+b<b>y</b>+c greater than 0
             <br></br>
-            <label>
+            
+          </div>
+
+          <Plot class="float-left ml-5 px-4 my-4"
+            data={plotData}
+            layout={layout}
+            config={{ displayModeBar: false }}
+            style={{ width: '700px', height: '500px' }}
+          />
+
+          {plotData && (
+            <div id="graph" class="float-left ml-5 px-4 my-4">
+            </div>
+          )}
+          <div id="input" class="ml-6 mr-6 top-4 fixed-left float-right border-2 w-1/3 p-4 border-b-4 border-gray-200 rounded-xl bg-gray-50">
+          <h1 class=" font-bold text-lg text-center"> <br />Input</h1>
+          <label>
               a:
-              <input className='bg-white rounded-full mx-6 my-6 px-3'
+              <input className='bg-white rounded-full mx-2 my-6 px-3'
                 type="number"
                 value={a}
                 placeholder='Enter A'
@@ -310,7 +326,7 @@ const Region = () => {
             </label>
             <label>
               b:
-              <input className='bg-white rounded-full mx-6 my-6 px-3'
+              <input className='bg-white rounded-full mx-2 my-6 px-3'
                 type="number"
                 value={b}
                 placeholder='Enter B'
@@ -319,7 +335,7 @@ const Region = () => {
             </label>
             <label>
               c:
-              <input className='bg-white rounded-full mx-6 my-6 px-3'
+              <input className='bg-white rounded-full mx-2 my-6 px-3'
                 type="number"
                 value={c}
                 placeholder='Enter C'
@@ -327,26 +343,16 @@ const Region = () => {
               />
             </label>
             <br></br>
-            <button class="btn btn-primary mx-6 my-2 " onClick={handlePlot}>Plot</button>
+            <button class="btn btn-lg btn-primary mx-8 my-8 " onClick={handlePlot}>Plot</button>
             <div className=' flex justify-align' style={{ alignItems: 'center' }}>
-              <button type="button" class="btn btn-danger mx-2" onClick={() => checkred(a, b)} >Red</button>
-              <button type="button" class="btn btn-success mr-2 ml-5" onClick={() => checkgreen(a, b)}>Green</button>
+              <button type="button" class="btn btn-danger mr-12 ml-12" onClick={() => checkred(a, b)} >Red</button>
+              <button type="button" class="btn btn-success mr-12 ml-12" onClick={() => checkgreen(a, b)}>Green</button>
             </div>
-            <div className="text-center bg-white p-4 border-t-2 border-gray-300">
-              <p>Total Points: {points}</p>
+            <br />
+            <div className="text-center p-4 border-t-2 border-gray-300">
+              <br /><p>Total Points: {points}</p>
             </div>
-          </div>
-
-          <Plot class="float-left ml-5 px-4 my-4"
-            data={plotData}
-            layout={layout}
-            style={{ width: '700px', height: '500px' }}
-          />
-
-          {plotData && (
-            <div id="graph" class="float-left ml-5 px-4 my-4">
             </div>
-          )}
         </div >
       </div>
     </>
