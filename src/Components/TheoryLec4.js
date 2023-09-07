@@ -31,12 +31,13 @@ const TheoryLec4 = () => {
                                         and is shaded for all values of x greater than (or equal to) 1
                                     </center></p>
                                 </article>
+                                <div className="flex justify-between mt-8">
+                                    <Link to="/theory3"><button class="btn btn-primary font-bold py-2 px-4 mb-2 rounded">Previous Lecture</button> </Link>
+                                    {/* <Link to="/theory2"><button class="btn btn-primary font-bold py-2 px-4 mb-2 rounded">Game</button></Link> */}
+                                    <Link to="/home"><button class="btn btn-primary font-bold py-2 px-4 mb-2 rounded">End</button></Link>
+                                </div>
                             </div>
-                            <div className="flex justify-between mt-8">
-                                <Link to="/theory3"><button class="btn btn-primary font-bold py-2 px-4 mb-2 rounded">Previous Lecture</button> </Link>
-                                {/* <Link to="/theory2"><button class="btn btn-primary font-bold py-2 px-4 mb-2 rounded">Game</button></Link> */}
-                                <Link to="/home"><button class="btn btn-primary font-bold py-2 px-4 mb-2 rounded">End</button></Link>
-                            </div>
+
                         </div>
                     </div>
                 </div>
