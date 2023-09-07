@@ -1,11 +1,14 @@
 import React from 'react';
 import './Style.css';
 import Sidebar from './Sidebar';
+import { Link } from 'react-router-dom';
+
 
 
 const TheoryLec1 = () => {
     return (
         <>
+
             <div className=''>
                 <div className='grid grid-cols-12 gap-4'>
                     <div className='col-span-1 flex items-center ml-7'>
@@ -76,7 +79,8 @@ const TheoryLec1 = () => {
                 </div>
             </div>
         </>
-    )
+    );
+    
 }
 
 export default TheoryLec1

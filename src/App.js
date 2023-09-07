@@ -32,15 +32,14 @@ return(
     <Route path='/theory2' element={<TheoryLec2 />}/>
     <Route path='/theory3' element={<TheoryLec3 />}/>
     <Route path='/theory4' element={<TheoryLec4 />}/>
-    <Route path='multi' element={<Multi />}/>
-    <Route path='points' element={<Points />}/>
+    <Route path='/multi' element={<Multi />}/>
+    <Route path='/points' element={<Points />}/>
     <Route path='' element={<Home />}/>
-    <Route path='multi' element={<Multi />}/>
-    <Route path='points' element={<Points />}/>
+    <Route path='/points' element={<Points />}/>
     <Route path='sidebar' element={<Sidebar />}/>
-    <Route path='anime' element={<Anime />}/>
-    <Route path='quiz' element={<Quiz />}/>
-    <Route path='settings' element={<Settings />}/>
+    <Route path='/anime' element={<Anime />}/>
+    <Route path='/quiz' element={<Quiz />}/>
+    <Route path='/settings' element={<Settings />}/>
   </Routes>
 )
 }

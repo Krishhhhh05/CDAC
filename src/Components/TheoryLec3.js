@@ -1,7 +1,8 @@
 import React from 'react';
-
 import './Style.css';
 import Sidebar from './Sidebar';
+import { Link } from 'react-router-dom';
+
 
 
 const TheoryLec3 = () => {
@@ -49,6 +50,11 @@ const TheoryLec3 = () => {
                   <p><center><b>The inequality y ≤ x + 2</b></center></p>
                   <p>We can see the y = x + 2 line, and the shaded area is where y is less than or equal to x + 2.</p>
                 </article>
+                <div className="flex justify-between mt-4">
+                  <Link to="/theory2"><button class="btn btn-primary font-bold py-2 px-4 mb-2 rounded">Previous Lecture</button> </Link>
+                  <Link to="/multi"><button class="btn btn-primary font-bold py-2 px-4 mb-2 rounded">Game</button></Link>
+                  <Link to="/theory4"><button class="btn btn-primary font-bold py-2 px-4 mb-2 rounded">Next Lecture</button></Link>
+                </div>
               </div>
             </div>
 
