@@ -1,11 +1,14 @@
 import React from 'react';
 import './Style.css';
 import Sidebar from './Sidebar';
+import { Link } from 'react-router-dom';
+
 
 
 const TheoryLec1 = () => {
     return (
         <>
+
             <div className=''>
                 <div className='grid grid-cols-12 gap-4'>
                     <div className='col-span-1 flex items-center ml-7'>
@@ -184,9 +187,12 @@ const TheoryLec1 = () => {
 
                                 (1, 0), (1, 1), (1, 2), (1, 3), (1, 4), (2, 0), (2, 1), (2, 2), (3, 0).
 
-                                Graphing Inequalities
-                                While graphing the line
-                                "</div>
+
+                                <div className="flex justify-between mt-4">
+                                    <Link to="/theory2"><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Game</button></Link>
+                                    <Link to="/theory2"><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Next Lecture</button></Link>
+                                </div>
+                            </div>
                             <div className="flex justify-end mt-4">
                             </div>
                         </div>
@@ -194,7 +200,8 @@ const TheoryLec1 = () => {
                 </div>
             </div>
         </>
-    )
+    );
+    
 }
 
 export default TheoryLec1

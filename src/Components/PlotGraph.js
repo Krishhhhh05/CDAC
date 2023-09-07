@@ -162,8 +162,10 @@ function PlotGraph() {
                 title: 'Line Graph of Equation',
                 xaxis: { title: 'X Axis' },
               }}
+              config={{ displayModeBar: false }}
             />
           </div>
+
         </div>
       </div>
     </>
