@@ -15,7 +15,6 @@ class SettingsPage extends React.Component {
             { subject: 'History', score: 75 },
         ],
     };
-
     render() {
         return (
             <>
