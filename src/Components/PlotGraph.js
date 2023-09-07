@@ -165,6 +165,7 @@ function PlotGraph() {
               config={{ displayModeBar: false }}
             />
           </div>
+
         </div>
       </div>
     </>
