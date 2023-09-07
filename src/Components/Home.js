@@ -53,56 +53,56 @@ function Home() {
           </div>
 
           <div className='col-span-5 flex items-center h-screen'>
-  <div className="mx-5">
-    <h3>TEST YOURSELF</h3>
+            <div className="mx-5">
+              <h3>TEST YOURSELF</h3>
 
-    <div className="card flex flex-row justify-between text-center font-semibold mt-3 py-2 px-8 items-center">
-      <div className="flex items-center">
-        <MdAutoGraph className="h-12 w-8 text-gray-500 mr-3" />
-        <h6>Plot The Graph</h6>
-      </div>
-      <Link to="/plot">
-        <button type="button" className="btn btn-primary py-2 px-6 h-9 w-20">Play</button>
-      </Link>
-    </div>
+              <div className="card flex flex-row justify-between text-center font-semibold mt-3 py-2 px-8 items-center">
+                <div className="flex items-center">
+                  <MdAutoGraph className="h-12 w-8 text-gray-500 mr-3" />
+                  <h6>Plot The Graph</h6>
+                </div>
+                <Link to="/plot">
+                  <button type="button" className="btn btn-primary py-2 px-6 h-9 w-20">Play</button>
+                </Link>
+              </div>
 
-    <div className="card flex flex-row justify-between text-center font-semibold mt-3 py-2 px-8 items-center">
-      <div className="flex items-center">
-        <AiOutlineArrowsAlt className="h-12 w-8 text-gray-500 mr-3" />
-        <h6>Points And Intercepts</h6>
-      </div>
-      <Link to="/points">
-        <button type="button" className="btn btn-primary py-2 px-6 h-9 w-20">Play</button>
-      </Link>
-    </div>
+              <div className="card flex flex-row justify-between text-center font-semibold mt-3 py-2 px-8 items-center">
+                <div className="flex items-center">
+                  <AiOutlineArrowsAlt className="h-12 w-8 text-gray-500 mr-3" />
+                  <h6>Points And Intercepts</h6>
+                </div>
+                <Link to="/points">
+                  <button type="button" className="btn btn-primary py-2 px-6 h-9 w-20">Play</button>
+                </Link>
+              </div>
 
-    <div className="card flex flex-row justify-between text-center font-semibold mt-3 py-2 px-8 items-center">
-      <div className="flex items-center">
-        <FaChartArea className="h-12 w-8 text-gray-500 float-left mr-3" />
-        <h6>Lines Game</h6>
-      </div>
-      <Link to="/multi">
-        <button type="button" className="btn btn-primary py-2 px-6 h-9 w-20">Play</button>
-      </Link>
-    </div>
+              <div className="card flex flex-row justify-between text-center font-semibold mt-3 py-2 px-8 items-center">
+                <div className="flex items-center">
+                  <FaChartArea className="h-12 w-8 text-gray-500 float-left mr-3" />
+                  <h6>Lines Game</h6>
+                </div>
+                <Link to="/multi">
+                  <button type="button" className="btn btn-primary py-2 px-6 h-9 w-20">Play</button>
+                </Link>
+              </div>
 
-    <div className="card flex flex-row justify-between text-center font-semibold mt-3 py-2 px-8 items-center">
-      <div className="flex items-center">
-        <LuAxis3D className="h-12 w-8 text-gray-500 mr-3" />
-        <h6>Region Game</h6>
-      </div>
-      <Link to="/region">
-        <button type="button" className="btn btn-primary py-2 px-6 h-9 w-20">Play</button>
-      </Link>
-    </div>
+              <div className="card flex flex-row justify-between text-center font-semibold mt-3 py-2 px-8 items-center">
+                <div className="flex items-center">
+                  <LuAxis3D className="h-12 w-8 text-gray-500 mr-3" />
+                  <h6>Region Game</h6>
+                </div>
+                <Link to="/region">
+                  <button type="button" className="btn btn-primary py-2 px-6 h-9 w-20">Play</button>
+                </Link>
+              </div>
 
-    <div className="bg-black rounded-md flex flex-row justify-center text-center font-semibold my-2 py-3 px-8 items-center">
-      <Link to="/quiz">
-        <button className="bg-white text-black py-2 px-4 h-12 rounded-md">MCQ TEST</button>
-      </Link>
-    </div>
-  </div>
-</div>
+              <div className="bg-black rounded-md flex flex-row justify-center text-center font-semibold my-2 py-3 px-8 items-center">
+                <Link to="/quiz">
+                  <button className="bg-white text-black py-2 px-4 h-12 rounded-md">MCQ TEST</button>
+                </Link>
+              </div>
+            </div>
+          </div>
 
 
 

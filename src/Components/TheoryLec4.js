@@ -1,7 +1,7 @@
 import React from 'react';
 import './Style.css';
 import Sidebar from './Sidebar';
-
+import { Link } from 'react-router-dom';
 
 const TheoryLec4 = () => {
     return (
@@ -32,7 +32,10 @@ const TheoryLec4 = () => {
                                     </center></p>
                                 </article>
                             </div>
-                            <div className="flex justify-end mt-4">
+                            <div className="flex justify-between mt-8">
+                                <Link to="/theory3"><button class="btn btn-primary font-bold py-2 px-4 mb-2 rounded">Previous Lecture</button> </Link>
+                                {/* <Link to="/theory2"><button class="btn btn-primary font-bold py-2 px-4 mb-2 rounded">Game</button></Link> */}
+                                <Link to="/home"><button class="btn btn-primary font-bold py-2 px-4 mb-2 rounded">End</button></Link>
                             </div>
                         </div>
                     </div>

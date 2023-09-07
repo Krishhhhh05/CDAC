@@ -42,7 +42,7 @@ const TheoryLec1 = () => {
 
                                 The strict inequality symbols are less than symbol ({'<'} ) and greater than symbol ({'>'}). These two symbols are called strict inequalities, as it shows the numbers are strictly greater than or less than each other.
 
-                               <h5>... Or Equal To!</h5>
+                                <h5>... Or Equal To!</h5>
 
                                 The slack inequalities are less than or equal to symbol (≤) and greater than or equal to symbol (≥). The slack inequalities represent the relation between two inequalities that are not strict.
 
@@ -51,15 +51,15 @@ const TheoryLec1 = () => {
                                 <p>... but it will have an Inequality like {'<'}, {'>'}, ≤, or ≥ instead of an =.</p>
 
                                 <h5>When there is an inequality with 1 variable and degree 1 it represents a line along the axes the variable represents.</h5>
-                                
+
                                 <p>The graph of a linear inequality in one variable is a number line. Use an open circle for {'<'} and {'>'} and a closed circle for ≤ and ≥.</p>
                                 <br></br>
                                 <center><b><p>The graph for x {'>'} -3</p>
-                                <img src="../assets/LEC1.1.png" alt="Example 1" style={{ width: '40%', height: '40%', }}></img>
-                                
-                                <br></br>
-                                <p>The graph for x ≥ 2</p>
-                                <img src="../assets/LEC 1.2.png" alt="Example 2" style={{ width: '40%', height: '40%', }}></img></b></center>
+                                    <img src="../assets/LEC1.1.png" alt="Example 1" style={{ width: '40%', height: '40%', }}></img>
+
+                                    <br></br>
+                                    <p>The graph for x ≥ 2</p>
+                                    <img src="../assets/LEC 1.2.png" alt="Example 2" style={{ width: '40%', height: '40%', }}></img></b></center>
 
                                 <br></br>
                                 <br></br>
@@ -67,20 +67,19 @@ const TheoryLec1 = () => {
                                 <h5>An equation with 2 variables and degree 1 represents a line on the plane.</h5>
                                 <br></br>
                                 <h5>When there is an inequality with 2 variables with the degree being 1 it represents a region on the graph.</h5>
-
-                               
-                                
-                                
-                                </div>
-                            <div className="flex justify-end mt-4">
                             </div>
+                            <div className="flex justify-between mt-8">
+                    <Link to="/home"><button class="btn btn-primary font-bold py-2 px-4 mb-2 rounded">Home</button> </Link>
+                    {/* <Link to="/theory2"><button class="btn btn-primary font-bold py-2 px-4 mb-2 rounded">Game</button></Link> */}
+                    <Link to="/theory2"><button class="btn btn-primary font-bold py-2 px-4 mb-2 rounded">Next Lecture</button></Link>
+                  </div>
                         </div>
                     </div>
                 </div>
             </div>
         </>
     );
-    
+
 }
 
 export default TheoryLec1

@@ -25,7 +25,7 @@ const TheoryLec3 = () => {
 
 
                 <article>
-                <h5>Solving Linear Inequalities in Two Variables</h5>
+                  <h5>Solving Linear Inequalities in Two Variables</h5>
                   <p>The solution of a linear inequality in two variables like <b>Ax + By {'>'} C</b> is an ordered pair <b>(x, y)</b> that produces a true statement when the values of x and y are substituted into the inequality.</p>
                   <h6>Example</h6>
                   <p>Is (1, 2) a solution to the inequality</p>
