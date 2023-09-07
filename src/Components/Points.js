@@ -156,48 +156,52 @@ const LinePlot = () => {
           <div class="mr-5 fixed-left float-right mt-8 h-3/4 border-2 w-1/3 px-4 py-6 border-b-4 border-gray-200 rounded-xl bg-gray-50">
               <h2 class="font-semibold text-lg text-center"><br /><br />Enter the coordinates of Line 1</h2>
 
-              <label>
-                X1:{' '}<input
+              <div className='flex-row my-3'>
+                X1:{' '}
+                <input
                   type="number"
                   className="bg-white rounded-full mx-6 my-6 px-3"
                   placeholder='Enter X1'
                   value={x1}
                   onChange={(event) => setX1(parseFloat(event.target.value))}
                 />
-              </label>
-              <label>
+              </div>
+             
+              <div className='flex-row my-3'>
                 Y1:{' '}
                 <input
                   type="number"
-                  className="bg-white rounded-full mx-6 my-6 px-3"
+                  className="bg-white rounded-full mr-3 px-3"
                   placeholder='Enter Y1'
                   value={y1}
                   onChange={(event) => setY1(parseFloat(event.target.value))}
                 />
-              </label>
+                </div>
 
               <h2 class="font-semibold text-lg text-center"><br />Enter the coordinates of Line 2</h2>
 
-              <label>
+              <div className='flex-row my-3'>
                 X2:{' '}
                 <input
                   type="number"
-                  className="bg-white rounded-full mx-6 my-6 px-3"
+                  className="bg-white rounded-full mr-3 px-3"
                   placeholder='Enter X2'
                   value={x2}
                   onChange={(event) => setX2(parseFloat(event.target.value))}
                 />
-              </label>
-              <label>
+                </div>
+              
+                <div className='flex-row my-3'>
                 Y2:{' '}
                 <input
                   type="number"
-                  className="bg-white rounded-full mx-6 my-6 px-3"
+                  className="bg-white rounded-full mr-3 px-3"
                   placeholder='Enter Y2'
                   value={y2}
                   onChange={(event) => setY2(parseFloat(event.target.value))}
                 />
-              </label>
+                </div>
+              
           </div>
         </div>
       </div>
