@@ -21,21 +21,17 @@ const TheoryLec4 = () => {
                             <div class="max-h-[500px] overflow-y-auto bg-white p-6">
 
 
-<article>
-  <p>To shade the region in an inequality with respect to lines, you need to identify the half-plane that contains the solutions to the inequality. Here are the steps:
-
-<center> <img src="../assets/lec 4.8.png" alt="Example" style={{ width: '40%', height: '40%', }}></img></center>
-<br></br>
-<p><center>This one doesn't even have y in it!<br></br>
-It has the line x=1, <br></br>
-and is shaded for all values of x greater than (or equal to) 1          
-</center></p>
-</article>
-
-                               
-                                
-                                
-                                </div>
+                                <article>
+                                    <p>To shade the region in an inequality with respect to lines, you need to identify the half-plane that contains the solutions to the inequality. Here are the steps:
+                                    </p>
+                                    <center> <img src="../assets/lec 4.8.png" alt="Example" style={{ width: '40%', height: '40%', }}></img></center>
+                                    <br></br>
+                                    <p><center>This one doesn't even have y in it!<br></br>
+                                        It has the line x=1, <br></br>
+                                        and is shaded for all values of x greater than (or equal to) 1
+                                    </center></p>
+                                </article>
+                            </div>
                             <div className="flex justify-end mt-4">
                             </div>
                         </div>
