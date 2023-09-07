@@ -16,7 +16,7 @@ const TheoryLec3 = () => {
           </div>
           <div className='col-span-11'>
             <div className="flex justify-center">
-              <h6 className="mb-2 text-2xl font-bold">PLOTTING OF LINES</h6>
+              <h6 className="mb-2 text-2xl font-bold">SOLVING LINEAR INEQUALITIES</h6>
             </div>
 
             <div class="h-full flex items-center w-5/6 ml-20">
@@ -24,19 +24,30 @@ const TheoryLec3 = () => {
 
 
                 <article>
-                  <p>To plot a line in slope-intercept form (y = mx + b), you can follow these steps:
-
-                    Identify the y-intercept: The y-intercept is the point where the line intersects the y-axis. It is represented by the value of b in the equation y = mx + b. If the equation is not in slope-intercept form, solve for y to get it in that form.
-
-                    Plot the y-intercept: Plot a point on the y-axis that corresponds to the value of b.
-
-                    Determine the slope: The slope of the line is represented by the value of m in the equation y = mx + b. The slope tells you how steep the line is and in which direction it is moving. If the slope is positive, the line will move up and to the right. If the slope is negative, the line will move down and to the right. If the slope is zero, the line will be horizontal.
-
-                    Use the slope to find another point: Starting from the y-intercept, move along the x-axis to the right by the value of the denominator of the slope. Then, move up or down along the y-axis by the value of the numerator of the slope. This will give you another point on the line.
-
-                    Plot the second point: Plot the second point on the graph.
-
-                    Draw the line: Use a ruler or a straightedge to draw a line that passes through both points.</p>
+                <h5>Solving Linear Inequalities in Two Variables</h5>
+                  <p>The solution of a linear inequality in two variables like <b>Ax + By {'>'} C</b> is an ordered pair <b>(x, y)</b> that produces a true statement when the values of x and y are substituted into the inequality.</p>
+                  <h6>Example</h6>
+                  <p>Is (1, 2) a solution to the inequality</p>
+                  <center>
+                    <p>2x+3y{'>'}1</p>
+                    <p>2⋅1+3⋅2{'>'}?1</p>
+                    <p>2+5{'>'}?1</p>
+                    <p>7{'>'}1</p>
+                  </center>
+                  <p>The graph of an inequality in two variables is the set of points that represents all solutions to the inequality. A linear inequality divides the coordinate plane into two halves by a boundary line where one half represents the solutions of the inequality. </p>
+                  <p>The boundary line is dashed for {'>'} and {'<'} and solid for ≤ and ≥. </p>
+                  <p>The half-plane that is a solution to the inequality is usually shaded.</p>
+                  <h6>Example</h6>
+                  <p>Graph the inequality </p>
+                  <p><center><b>y≥−x+1</b></center></p>
+                  <center> <img src="../assets/lec 3.1.png" alt="Example" style={{ width: '40%', height: '40%', }}></img></center>
+                  <br></br>
+                  <br></br>
+                  <p>This is a graph of a linear inequality:</p>
+                  <center> <img src="../assets/lec 3.2.png" alt="Example" style={{ width: '40%', height: '40%', }}></img></center>
+                  <br></br>
+                  <p><center><b>The inequality y ≤ x + 2</b></center></p>
+                  <p>We can see the y = x + 2 line, and the shaded area is where y is less than or equal to x + 2.</p>
                 </article>
               </div>
             </div>
@@ -49,3 +60,4 @@ const TheoryLec3 = () => {
 }
 
 export default TheoryLec3
+
