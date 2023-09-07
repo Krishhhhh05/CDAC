@@ -99,10 +99,10 @@ const TheoryLec2 = () => {
                   Finally, the point (2, 3) is located on the first quadrant of the cartesian plane.
 
                   <center><img src="../assets/lec2-5.png" alt="Understanding of Planes and Axis" style={{ width: '40%', height: '40%', }}></img></center>
-                  <div className="flex justify-between mt-4">
-                    <Link to="/theory1"><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Previous Lecture</button> </Link>
-                    <Link to="/theory2"><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Game</button></Link>
-                    <Link to="/theory3"><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Next Lecture</button></Link>
+                  <div className="flex justify-between mt-8">
+                    <Link to="/theory1"><button class="btn btn-primary font-bold py-2 px-4 mb-2 rounded">Previous Lecture</button> </Link>
+                    {/* <Link to="/theory2"><button class="btn btn-primary font-bold py-2 px-4 mb-2 rounded">Game</button></Link> */}
+                    <Link to="/theory3"><button class="btn btn-primary font-bold py-2 px-4 mb-2 rounded">Next Lecture</button></Link>
                   </div>
 
                 </section>

@@ -40,9 +40,9 @@ const TheoryLec3 = () => {
                     Draw the line: Use a ruler or a straightedge to draw a line that passes through both points.</p>
                 </article>
                 <div className="flex justify-between mt-4">
-                  <Link to="/theory2"><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Previous Lecture</button> </Link>
-                  <Link to="/theory2"><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Game</button></Link>
-                  <Link to="/theory4"><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Next Lecture</button></Link>
+                  <Link to="/theory2"><button class="btn btn-primary font-bold py-2 px-4 mb-2 rounded">Previous Lecture</button> </Link>
+                  <Link to="/multi"><button class="btn btn-primary font-bold py-2 px-4 mb-2 rounded">Game</button></Link>
+                  <Link to="/theory4"><button class="btn btn-primary font-bold py-2 px-4 mb-2 rounded">Next Lecture</button></Link>
                 </div>
               </div>
             </div>

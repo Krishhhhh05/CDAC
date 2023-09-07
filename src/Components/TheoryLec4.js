@@ -39,8 +39,8 @@ const TheoryLec4 = () => {
                 </article>
                 <center><img src="../assets/theorylec4.jpg" alt="Shading of Region" style={{ width: '30%', height: '30%', }}></img></center>
                 <div className="flex justify-between mt-4">
-                  <Link to="/theory3"><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Previous Lecture</button> </Link>
-                  <Link to="/theory2"><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Game</button></Link>
+                  <Link to="/theory3"><button class="btn btn-primary font-bold py-2 px-4 mb-2 rounded">Previous Lecture</button> </Link>
+                  <Link to="/region"><button class="btn btn-primary font-bold py-2 px-4 mb-2 rounded">Game</button></Link>
                 </div>
               </div>
             </div>
