@@ -26,7 +26,15 @@
   background-color: black;
   color: white;
   font-size: 12px;
+  border-color:black;
 }
+
+.btn-primary:hover {
+  border-color: black;
+  background-color: transparent;
+  color: black;
+}
+
 
 #root {
   height: 100vh;

@@ -59,7 +59,7 @@ function PlotGraph() {
   return (
     <>
       <div className='App'>
-        < div class="flex m-2 justify-start items-center h-screen">
+        < div class="flex justify-start items-center h-screen">
           <div id="sidebar" class="bg-black rounded-lg h-90 w-20 flex flex-col items-center">
             <div class="text-white p-8">
               <div>
@@ -114,9 +114,9 @@ function PlotGraph() {
               </div>
             </div>
           </div>
-          <div class="px-6">
+          <div >
 
-            <div id="input" class="mr-5 fixed-left float-right border-2 w-96 max-w-3xl p-4 border-b-4 border-gray-200 rounded-xl bg-gray-50">
+            <div id="input" class="ml-6 mr-4 fixed-left float-right border-2 w-96 max-w-3xl p-4 border-b-4 border-gray-200 rounded-xl bg-gray-50">
               <h1 class="font-bold text-lg text-center"> Plotting the Equation</h1>
               <br />
               <div class="">
@@ -162,8 +162,10 @@ function PlotGraph() {
                 title: 'Line Graph of Equation',
                 xaxis: { title: 'X Axis' },
               }}
+              config={{ displayModeBar: false }}
             />
           </div>
+
         </div>
       </div>
     </>
