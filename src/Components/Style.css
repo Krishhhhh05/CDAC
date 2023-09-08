@@ -1,5 +1,5 @@
 .App {
-  background-image: linear-gradient(to right, rgb(137, 230, 230), rgb(204, 250, 253));
+  background-image: linear-gradient(to right, #87ceeb, #fe9baa);
 }
 
 .card-container {
@@ -12,7 +12,7 @@
 .card {
 
   text-align: left;
-  background-color: #cbcbca;
+  background-color: rgb(238, 237, 237);
   width: 500px;
   border-radius: 50%;
   border-radius: 4px;
@@ -34,7 +34,7 @@
   justify-content: center;
   align-items: center;
 
-  background-color: #f7f3e7;
+  background-image: linear-gradient(to right, #87ceeb, #fe9baa);
 }
 
 #container {

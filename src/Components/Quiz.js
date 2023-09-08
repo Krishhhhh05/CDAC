@@ -2,21 +2,12 @@ import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
 import { IoMdExit } from 'react-icons/io';
-// import undrawIllustration from '../quiz.svg';
+//import undrawIllustration from '../quiz.svg';
 import './Style.css';
 
 
 const questions = [
   {
-
-    question: 'What symbols are used to represent inequalities?',
-    options: ['=', '>=', '<=', '=='],
-    correctAnswer: '<=',
-  },
-  {
-    question: 'In the inequality 5x - 3 < 3x + 1, what is the solution for x?',
-    options: ['x > -2', 'x > 2', 'x = -2', 'x = 2'],
-
     question: "Consider the following system of inequalities: A. y > x + 1  B. y < 10 C. x > 1  Which of the following is NOT in the feasible region of this system?",
     options: ['(2, 4)', '(3, 8)', '(5, 6)', ' (6, 6)'],
     correctAnswer: ' (6, 6)',

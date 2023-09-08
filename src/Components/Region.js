@@ -35,8 +35,8 @@ const Region = () => {
 
 
   const handlePlot = () => {
-    if (a === '' || b === '' || c === '') {
-      Swal.fire('Enter Values', 'Please enter all values before selecting an option.', 'warning');
+    if (a === '' || b === '' || c === '' || isNaN(a) || isNaN(b) || isNaN(c)) {
+      Swal.fire('Missing Values', 'Please enter values for slope and intercept before selecting an option.', 'warning');
       return;
     }
     const x = [-10, 10];
@@ -133,8 +133,8 @@ const Region = () => {
   }, [points]);
 
   async function checkred() {
-    if (a === '' || b === '' || c === '') {
-      Swal.fire('Enter Values', 'Please enter values for slope and intercept before selecting an option.', 'warning');
+    if (a === '' || b === '' || c === '' || isNaN(a) || isNaN(b) || isNaN(c)) {
+      Swal.fire('Missing Values', 'Please enter values for slope and intercept before selecting an option.', 'warning');
       return;
     }
     if (a > 0 && b > 0 && c > 0) {
@@ -184,8 +184,8 @@ const Region = () => {
   }
 
   async function checkgreen() {
-    if (a === '' || b === '' || c === '') {
-      Swal.fire('Enter Values', 'Please enter all values before selecting an option.', 'warning');
+    if (a === '' || b === '' || c === '' || isNaN(a) || isNaN(b) || isNaN(c)) {
+      Swal.fire('Missing Values', 'Please enter values for slope and intercept before selecting an option.', 'warning');
       return;
     }
     if (a < 0 || b < 0 || c < 0) {
@@ -291,13 +291,13 @@ const Region = () => {
               </div>
             </div>
           </div>
-          <div id="input" class="mr-5 top-4 fixed-left float-right border-2 w-1/3 p-4 border-b-4 border-gray-200 rounded-xl bg-gray-50">
-            <h1 class=" font-bold text-lg text-center"> Shading the region</h1>
+          <div id="input" class="ml-12 mr-14 top-4 fixed-left float-right border-2 w-1/3 p-4 border-b-4 border-gray-200 rounded-xl bg-gray-50">
+            <h1 class=" font-bold text-lg text-center"> <br />Shading the region</h1>
 
-            Here we use the equation-<br></br><br></br>
-            <img src="../assets/main.png" alt="main_eq" style={{ width: '50%', height: '2%', }}></img><br></br>
+            <br /><br /><p class="ml-8 text-left">Here we use the equation-</p>
+            <img src="../assets/main.png" alt="main_eq" style={{ width: '38%', height: '2%', }}></img>
             The entire graph is divided into 2 parts and shaded positive or negative according to the equation.
-            Identify the Region which represent the postive region i.e. Ax+By+C is greater than zero
+            Identify the Region which represent the postive region <br />i.e. Ax+By+C is greater than zero
             <br></br>
             <label>
               a:
@@ -329,7 +329,7 @@ const Region = () => {
             <br></br>
             <button class="btn btn-primary mx-6 my-2 " onClick={handlePlot}>Plot</button>
             <div className=' flex justify-align' style={{ alignItems: 'center' }}>
-              <button type="button" class="btn btn-danger mx-2" onClick={() => checkred(a, b)}>Red</button>
+              <button type="button" class="btn btn-danger mx-2" onClick={() => checkred(a, b)} >Red</button>
               <button type="button" class="btn btn-success mr-2 ml-5" onClick={() => checkgreen(a, b)}>Green</button>
             </div>
             <div className="text-center bg-white p-4 border-t-2 border-gray-300">
