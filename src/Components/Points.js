@@ -66,7 +66,7 @@ const LinePlot = () => {
               <h1 class="font-bold text-lg text-center"><br />Plotting the points</h1><br />
 
               Here we enter the coordinates of the two points of the line and plot them on the graph.
-              <br />Note: Both the points must be different in order to plot the graph.
+              Note: Both the points must be different in order to print the graph.
               <br></br>
               <br></br>
               We can calculate the slope of the line with the formula:
