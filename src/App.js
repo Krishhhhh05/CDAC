@@ -35,6 +35,7 @@ return(
     <Route path='/multi' element={<Multi />}/>
     <Route path='/points' element={<Points />}/>
     <Route path='' element={<Home />}/>
+    <Route path='/home' element={<Home />}/>
     <Route path='/points' element={<Points />}/>
     <Route path='sidebar' element={<Sidebar />}/>
     <Route path='/anime' element={<Anime />}/>
