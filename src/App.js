@@ -28,6 +28,11 @@ return(
   <Routes>
     <Route path='/region' element={<Region />}/>
     <Route path='/plot' element={<PlotGraph />}/>
+    <Route path='/theory' element={<TheoryLec1 />}/>
+    <Route path='/animation' element={<Home />}/>
+    <Route path='/simulator' element={<Points />}/>
+    <Route path='/reference' element={<Home />}/>
+    <Route path='/feedback' element={<Home />}/>
     <Route path='/theory1' element={<TheoryLec1 />}/>
     <Route path='/theory2' element={<TheoryLec2 />}/>
     <Route path='/theory3' element={<TheoryLec3 />}/>

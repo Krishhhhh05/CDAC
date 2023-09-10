@@ -65,7 +65,8 @@ const LinePlot = () => {
             <div class="fixed-left float-right mt-8 h-3/4 border-2 px-4 py-auto border-b-4 border-gray-200 rounded-xl bg-gray-50">
               <h1 class="font-bold text-lg text-center"><br />Plotting the points</h1><br />
 
-              Here we enter the coordinates of the two lines and plot them on the graph.
+              Here we enter the coordinates of the two points of the line and plot them on the graph.
+              <br />Note: Both the points must be different in order to plot the graph.
               <br></br>
               <br></br>
               We can calculate the slope of the line with the formula:
@@ -83,7 +84,7 @@ const LinePlot = () => {
           </div>
 
           <div class=" fixed-left float-right h-3/4 border-2 w-1/3 px-4 py-6 border-b-4 border-gray-200 rounded-xl bg-gray-50">
-            <h2 class="font-semibold text-lg text-center"><br /><br />Enter the coordinates of Line 1</h2>
+            <h2 class="font-semibold text-lg text-center"><br /><br />Enter the coordinates of Point 1</h2>
 
             <div className='flex-row my-3'>
               X1:{' '}
@@ -107,7 +108,7 @@ const LinePlot = () => {
               />
             </div>
 
-            <h2 class="font-semibold text-lg text-center"><br />Enter the coordinates of Line 2</h2>
+            <h2 class="font-semibold text-lg text-center"><br />Enter the coordinates of Point 2</h2>
 
             <div className='flex-row my-3'>
               X2:{' '}
